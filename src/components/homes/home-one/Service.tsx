@@ -8,19 +8,19 @@ interface TabData {
 const tab_title: TabData[] = [
    {
       icon: "icon-roof-7",
-      title: "Modified Roofing",
+      title: "Professional Painting Services",
    },
    {
       icon: "icon-roof-2",
-      title: "Roof Installation",
+      title: "Drywall Installation",
    },
    {
       icon: "icon-roof-8",
-      title: "Roof Cornering",
+      title: "Wood & Metal Working",
    },
    {
       icon: "icon-roof-4",
-      title: "Roof Renovation",
+      title: "Tile Work Services",
    },
 ];
 
@@ -36,30 +36,30 @@ const service_data: DataType[] = [
    {
       id: 1,
       thumb: "/assets/imgs/resources/service-tab-1.jpg",
-      title: "Modified Roofing",
-      desc: "It is a long established fact that a reader will content of a page when looking at layout the point of using lorem.",
-      list: ["Accurate Testing Processes", "100% Satisfaction Guarantee", "Award Winning Company"],
+      title: "Professional Painting Services",
+      desc: "Expert interior and exterior painting, priming, and surface preparation. We give your newly renovated spaces a polished, vibrant, and long-lasting finish.",
+      list: ["High-End Interior Painting", "Surface Preparation & Priming", "Premium Quality Coatings"],
    },
    {
       id: 2,
       thumb: "/assets/imgs/resources/service-tab-1.jpg",
-      title: "Roof Installation",
-      desc: "It is a long established fact that a reader will content of a page when looking at layout the point of using lorem.",
-      list: ["Accurate Testing Processes", "100% Satisfaction Guarantee", "Award Winning Company"],
+      title: "Drywall Installation & Framing",
+      desc: "Expert sheetrock hanging, metal and wood framing, and multi-coat joint compound finishing. We build sturdy walls and ceilings with smooth, paint-ready surfaces.",
+      list: ["Precise Wall & Ceiling Hanging", "Seamless Taping & Mudding", "Professional & Clean Crew"],
    },
    {
       id: 3,
       thumb: "/assets/imgs/resources/service-tab-1.jpg",
-      title: "Roof Cornering",
-      desc: "It is a long established fact that a reader will content of a page when looking at layout the point of using lorem.",
-      list: ["Accurate Testing Processes", "100% Satisfaction Guarantee", "Award Winning Company"],
+      title: "Custom Wood & Metal Working",
+      desc: "Professional metal stud framing, structural wood framing, architectural woodwork, and custom carpentry built strictly to code for residential and commercial projects.",
+      list: ["Metal & Wood Stud Framing", "Custom Carpentry & Woodwork", "Precision Structural Layout"],
    },
    {
       id: 4,
       thumb: "/assets/imgs/resources/service-tab-1.jpg",
-      title: "Roof Renovation",
-      desc: "It is a long established fact that a reader will content of a page when looking at layout the point of using lorem.",
-      list: ["Accurate Testing Processes", "100% Satisfaction Guarantee", "Award Winning Company"],
+      title: "Professional Tile Work",
+      desc: "Exceptional tile installation for floors, walls, kitchens, and bathrooms. We deliver durable, beautiful, and precise tile layouts tailored to your interior design.",
+      list: ["Kitchen & Bathroom Tiling", "Floor & Wall Tile Setting", "Clean & Detailed Finish"],
    },
 ];
 
@@ -85,7 +85,7 @@ const Service = ({ style }: PropType) => {
             <div className="service-tab-title-area mb-70">
                <div className="title-box wow fadeInLeft" data-wow-delay=".5s">
                   <span className="section-sub-title">WHAT WE DO</span>
-                  <h3 className="section-title mt-10 text-white p-relative">Delivering High Quality <br />Roof Services</h3>
+                  <h3 className="section-title mt-10 text-white p-relative">Delivering High Quality Interior <br /> & Renovation Services</h3>
                </div>
                <Link className="primary-btn-4 btn-hover mt-20" to="/services">
                   all services &nbsp; | <i className="icon-right-arrow"></i>

@@ -7,7 +7,6 @@ import Project from "../home-one/Project"
 import Testimonial from "../home-three/Testimonial"
 import Counter from "../home-one/Counter"
 import HelpForm from "../home-one/HelpForm"
-import Blog from "../home-one/Blog"
 import Features from "../home-one/Features"
 import HeaderOne from "../../../layouts/headers/HeaderOne"
 import FooterOne from "../../../layouts/footers/FooterOne"
@@ -27,7 +26,7 @@ const DarkHome = () => {
         <Testimonial style={true} />
         <Counter style={true} />
         <HelpForm />
-        <Blog style={true} />
+        {/* <Blog style={true} /> */}
       </main>
       <FooterOne />
     </>

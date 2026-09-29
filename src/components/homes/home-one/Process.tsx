@@ -9,21 +9,18 @@ const process_data: Datatype[] = [
    {
       id: 1,
       icon: "icon-dollar-tag",
-      title: "Roof Planning",
-      desc: "In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur",
-   },
+      title: "Consultation & Measurement",
+      desc: "We discuss your project details, take precise measurements, analyze the space layout, and provide a transparent free estimate"   },
    {
       id: 2,
       icon: "icon-engineer",
-      title: "Roof Installation",
-      desc: "In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur",
-   },
+      title: "Professional Execution",
+      desc: "Our experienced crew handles framing, drywall hanging, taping, or custom finishes efficiently and strictly according to code."   },
    {
       id: 3,
       icon: "icon-home",
-      title: "Finished Roof",
-      desc: "In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur",
-   },
+      title: "Final Inspection & Cleanup",
+      desc: "We perform a meticulous quality check, clean up the job site entirely, and deliver flawless, paint-ready spaces on time."   },
 ];
 
 interface PropType {

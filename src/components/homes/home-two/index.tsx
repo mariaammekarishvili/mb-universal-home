@@ -6,7 +6,6 @@ import ChooseArea from "./ChooseArea"
 import Project from "./Project"
 import Brand from "./Brand"
 import Faq from "./Faq"
-import Blog from "./Blog"
 import FooterTwo from "../../../layouts/footers/FooterTwo"
 import HeaderTwo from "../../../layouts/headers/HeaderTwo"
 
@@ -23,7 +22,7 @@ const HomeTwo = () => {
             <Project />
             <Brand />
             <Faq />
-            <Blog />
+            {/* <Blog /> */}
          </main>
          <FooterTwo />
       </>

@@ -12,27 +12,27 @@ const counter_data: DataType[] = [
    {
       id: 1,
       icon: "icon-home-1",
-      number: 300,
+      number: 200,
       title: "Successfully Projects",
       number_text: "+"
    },
    {
       id: 2,
       icon: "icon-team",
-      number: 450,
+      number: 30,
       title: "Company Staffs",
       number_text: "+"
    },
    {
       id: 3,
       icon: "icon-prize-box",
-      number: 3150,
+      number: 150,
       title: "Tons of Products",
    },
    {
       id: 4,
       icon: "icon-team-1",
-      number: 6561,
+      number: 1000,
       title: "Satisfied Clients",
    },
 ];
