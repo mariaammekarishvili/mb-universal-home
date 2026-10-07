@@ -3,43 +3,73 @@ import { Link } from "react-router-dom";
 import team_data from "../../../data/TeamData";
 
 const Team = () => {
-   return (
-      <section className="team-section p-relative section-space">
-         <div className="shape-1" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-13.png)` }}></div>
-         <div className="shape-2 float-bob-y" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-14.png)` }}></div>
-         <div className="small-container">
-            <div className="title-box text-center mb-50 wow fadeInLeft" data-wow-delay=".5s">
-               <span className="section-sub-title">OUR EXPERT</span>
-               <h3 className="section-title mt-10">The Specialists in Roofing</h3>
-            </div>
-            <div className="row g-4">
-               {team_data.filter((items) => items.page === "home_3").map((item) => (
-                  <div key={item.id} className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                     <div className="team-area-box p-relative mb-60 wow fadeInLeft" data-wow-delay=".7s">
-                        <figure className="image w-img p-relative">
-                           <img src={item.thumb} alt="" />
-                        </figure>
-                        <div className="content">
-                           <div className="author-info">
-                              <h5 className="mb-5"><Link to="/team-details">{item.name}</Link></h5>
-                              <span>{item.designation}</span>
-                           </div>
-                           <div className="social-links p-relative">
-                              <span><i className="icon-share"></i></span>
-                              <ul>
-                                 {businessSocials.map((social) => (
-                                 <li key={social.name}><a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name}><i className={social.icon}></i></a></li>
-                              ))}
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
+  return (
+    <section className="team-section p-relative section-space">
+      <div
+        className="shape-1"
+        style={{ backgroundImage: `url(/assets/imgs/shapes/shape-13.png)` }}
+      ></div>
+      <div
+        className="shape-2 float-bob-y"
+        style={{ backgroundImage: `url(/assets/imgs/shapes/shape-14.png)` }}
+      ></div>
+      <div className="small-container">
+        <div
+          className="title-box text-center mb-50 wow fadeInLeft"
+          data-wow-delay=".5s"
+        >
+          <span className="section-sub-title">OUR EXPERT</span>
+          <h3 className="section-title mt-10">The Specialists in Roofing</h3>
+        </div>
+        <div className="row g-4">
+          {team_data
+            .filter((items) => items.page === "home_3")
+            .map((item) => (
+              <div
+                key={item.id}
+                className="col-xxl-4 col-xl-4 col-lg-4 col-md-6"
+              >
+                <div
+                  className="team-area-box p-relative mb-60 wow fadeInLeft"
+                  data-wow-delay=".7s"
+                >
+                  <figure className="image w-img p-relative">
+                    <img src={item.thumb} alt="" />
+                  </figure>
+                  <div className="content">
+                    <div className="author-info">
+                      <h5 className="mb-5">
+                        <Link to="/team-details">{item.name}</Link>
+                      </h5>
+                      <span>{item.designation}</span>
+                    </div>
+                    <div className="social-links p-relative">
+                      <span>
+                        <i className="icon-share"></i>
+                      </span>
+                      <ul>
+                        {businessSocials.map((social) => (
+                          <li key={social.name}>
+                            <a
+                              href={social.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={social.name}
+                            >
+                              <i className={social.icon}></i>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-               ))}
-            </div>
-         </div>
-      </section>
-   )
-}
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Team
+export default Team;

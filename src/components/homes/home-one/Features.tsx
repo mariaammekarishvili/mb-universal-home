@@ -10,7 +10,7 @@ interface DataType {
 const feature_data: DataType[] = [
   {
     id: 1,
-    icon: "icon-hammer",
+    icon: "icon-engineer",
     title: "Expert Team",
     desc: "Our experienced contractors bring over 15 years of hands-on expertise in drywall, framing, and interior renovations.",
   },
@@ -28,7 +28,7 @@ const feature_data: DataType[] = [
   },
   {
     id: 4,
-    icon: "icon-roof-7",
+    icon: "icon-hammer",
     title: "Full Interior Renovation",
     desc: "From precise framing and drywall hanging to expert painting, tile, and flooring solutions under one roof.",
   },

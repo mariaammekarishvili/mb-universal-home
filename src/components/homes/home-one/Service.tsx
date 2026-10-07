@@ -7,7 +7,7 @@ interface TabData {
 }
 const tab_title: TabData[] = [
    {
-      icon: "icon-roof-7",
+      icon: "icon-home-1",
       title: "Professional Painting Services",
    },
    {
@@ -15,7 +15,7 @@ const tab_title: TabData[] = [
       title: "Drywall Installation",
    },
    {
-      icon: "icon-roof-8",
+      icon: "icon-hammer",
       title: "Wood & Metal Working",
    },
    {

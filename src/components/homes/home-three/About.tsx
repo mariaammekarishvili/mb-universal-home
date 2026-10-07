@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Count from "../../common/Count";
 import VideoPopup from "../../../modals/VideoPopup";
+import AboutCards from "./AboutCards";
 
 interface DataType {
   sub_title: string;
@@ -16,9 +17,10 @@ interface DataType {
 }
 
 const about_data: DataType = {
-  sub_title: "About Us",
-  title: "Devoted to Delivering Top Notch Drywall & Renovation Solutions",
-  desc: " With over 9 years of combined experience, MB Universal Home provides expert drywall installation, metal framing, smooth taping, and complete interior finishes. We serve residential and commercial clients across NY, NJ, CT, and PA with unmatched precision and reliability.",
+  sub_title: "ABOUT MB UNIVERSAL HOME",
+  title:
+    "Building Excellence, Crafting Interiors, and Delivering Perfection Across NY, NJ & PA",
+  desc: "Welcome to MB Universal Home LLC, your trusted partner for high-end drywall, framing, and complete interior renovation services. Based and operating across New York, New Jersey, Connecticut, and Pennsylvania, we combine years of hands-on industry experience with a strict commitment to superior craftsmanship. Whether it’s a residential home upgrade or a large-scale commercial project, our team brings precision, reliability, and attention to detail to every single square foot we touch.",
   feature_list: [
     {
       id: 1,
@@ -39,7 +41,7 @@ const { sub_title, title, desc, feature_list } = about_data;
 
 const About = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-
+  return (<AboutCards />);
   return (
     <>
       <section className="about-us-section section-space p-relative">
@@ -138,10 +140,14 @@ const About = () => {
                   className="about-btn-box wow fadeInLeft"
                   data-wow-delay="1s"
                 >
-                  <Link className="primary-btn-1 btn-hover" to="/about">
-                    about us &nbsp; | <i className="icon-right-arrow"></i>
+                  <a
+                    className="primary-btn-1 btn-hover"
+                    href="tel:+17327907530"
+                  >
+                    Call now ( +1 732-790-7530 ) &nbsp; |{" "}
+                    <i className="icon-right-arrow"></i>
                     <span style={{ top: "147.172px", left: "108.5px" }}></span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

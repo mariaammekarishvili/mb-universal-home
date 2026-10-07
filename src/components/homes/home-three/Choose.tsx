@@ -19,21 +19,21 @@ const choose_data: DataType = {
    feature_list: [
       {
          id: 1,
-         icon: "icon-roof-4",
-         title: "Commercial Roofing",
-         desc: "Embarrassing hidden in the middle All the Lorem Ipsum generators on the Internet repeat predefined chunks",
+         icon: "icon-team-1",
+         title: "Commercial & Residential Excellence",
+         desc: "We deliver top-tier drywall, framing, and interior renovation solutions tailored precisely to the high standards of both residential homes and commercial properties.",
       },
       {
          id: 2,
          icon: "icon-target",
-         title: "Mission Statement Roofing",
-         desc: "Embarrassing hidden in the middle All the Lorem Ipsum generators on the Internet repeat predefined chunks",
+         title: "Client-Focused Mission",
+         desc: "Our mission is to provide transparent communication, strict adherence to deadlines, and flawless craftsmanship from the initial consultation to the final cleanup",
       },
       {
          id: 3,
          icon: "icon-help",
          title: "Safety And Reliability",
-         desc: "Embarrassing hidden in the middle All the Lorem Ipsum generators on the Internet repeat predefined chunks",
+         desc: "We utilize premium-grade materials, professional safety protocols, and expert installation techniques to ensure sturdy, dependable, and long-lasting results.",
       },
    ],
 }

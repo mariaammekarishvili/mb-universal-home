@@ -1,9 +1,8 @@
-import ServiceArea from "./ServiceArea"
 import HeaderThree from "../../../layouts/headers/HeaderThree"
 import BreadCrumb from "../../common/BreadCrumb"
 import FooterThree from "../../../layouts/footers/FooterThree"
-import Choose from "../../homes/home-three/Choose"
 import Counter from "../../homes/home-one/Counter"
+import ServiceNew from "./Service-new"
 
 const Service = () => {
    return (
@@ -11,8 +10,8 @@ const Service = () => {
          <HeaderThree />
          <main>
             <BreadCrumb sub_title="Services" title="Services" />
-            <ServiceArea />
-            <Choose />
+            {/* <ServiceArea /> */}
+            <ServiceNew />
             <Counter style={false} />
          </main>
          <FooterThree />

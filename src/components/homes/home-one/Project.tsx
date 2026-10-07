@@ -55,12 +55,18 @@ const Project = ({ style }: PropType) => {
                   <SwiperSlide key={item.id} className="swiper-slide">
                      <div className="project-slider-two-box p-relative">
                         <figure className="image w-img">
-                           <img src={item.thumb} alt="" />
+                           <img
+                              src={item.thumb}
+                              width={520}
+                              height={439}
+                              style={{ width: "100%", height: "439px", objectFit: "cover", display: "block" }}
+                              alt=""
+                           />
                         </figure>
                         <div className="content">
                            <div className="inner-box">
-                              <span>{item.sub_title}</span>
-                              <h5><Link to="/projects">{item.title}</Link></h5>
+                              <span>See more</span>
+                              {/* <h5><Link to="/projects">{item.title}</Link></h5> */}
                            </div>
                            <Link className="icon-1" to="/projects">
                               <i className="icon-arrow-up"></i>

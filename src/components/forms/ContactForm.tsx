@@ -9,7 +9,7 @@ interface FormData {
    user_name: string;
    user_email: string;
    subject: string;
-   user_phone: number;
+   user_phone: string;
    message: string;
 }
 
@@ -18,36 +18,36 @@ const schema = yup
       user_name: yup.string().required().label("Name"),
       user_email: yup.string().required().email().label("Email"),
       subject: yup.string().required().label("Subject"),
-      user_phone: yup.number()
-         .transform((originalValue, originalObject) => {
-            return originalObject && originalObject.phone === '' ? NaN : originalValue;
-         })
-         .typeError('Phone number is required')
-         .required('Phone must be a number'),
+      user_phone: yup.string()
+         .required('Phone number is required')
+         .test('phone-length', 'Enter a valid phone number', (value) => {
+            const digits = value?.replace(/\D/g, '').length ?? 0;
+            return digits >= 7 && digits <= 15;
+         }),
       message: yup.string().required().label("Message"),
    })
    .required();
 
 const ContactForm = () => {
 
-   const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>({ resolver: yupResolver(schema), });
+   const { register, handleSubmit, reset, formState: { errors, isSubmitting }, } = useForm<FormData>({ resolver: yupResolver(schema), });
 
    const form = useRef<HTMLFormElement>(null);
 
-   const sendEmail = () => {
-      if (form.current) {
-         emailjs.sendForm('service_6y6yqwk', 'template_l7vv1mg',
-            form.current, '0Nl20_gGiZ8xlkEt9')
-            .then((result) => {
-               const notify = () => toast('Message sent successfully', { position: 'top-center' });
-               notify();
-               reset();
-               console.log(result.text);
-            }, (error) => {
-               console.log(error.text);
-            });
-      } else {
-         console.error("Form reference is null");
+   const sendEmail = async () => {
+      if (!form.current) {
+         toast.error('Contact form is unavailable. Please email mbuniversalhome@gmail.com.');
+         return;
+      }
+
+      try {
+         await emailjs.sendForm('service_6y6yqwk', 'template_l7vv1mg',
+            form.current, '0Nl20_gGiZ8xlkEt9');
+         toast.success('Message submitted successfully');
+         reset();
+      } catch (error) {
+         console.error('Contact form submission failed:', error);
+         toast.error('Message could not be sent. Please email mbuniversalhome@gmail.com.');
       }
    };
 
@@ -80,8 +80,8 @@ const ContactForm = () => {
                <p className="form_error">{errors.message?.message}</p>
             </div>
             <div className="col-lg-12">
-               <button type="submit" className="primary-btn-1 btn-hover">
-                  Send Now &nbsp; | <i className="icon-right-arrow"></i>
+               <button type="submit" className="primary-btn-1 btn-hover" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Now"} &nbsp; | <i className="icon-right-arrow"></i>
                   <span style={{ top: "147.172px", left: "108.5px" }}></span>
                </button>
             </div>

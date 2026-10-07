@@ -1,26 +1,50 @@
-const text_slider: string[] = ["ROOF RENOVATION", "MODIFIED ROOFING", "ROOF INSTALLATION", "ROOF RENOVATION", "MODIFIED ROOFING", "ROOF INSTALLATION"];
+import "./TextSlider.css";
+
+const partner_images = [
+  "/assets/imgs/partners/1.png",
+  "/assets/imgs/partners/2.png",
+  "/assets/imgs/partners/3.png",
+  "/assets/imgs/partners/4.png",
+  "/assets/imgs/partners/5.png",
+  "/assets/imgs/partners/6.png",
+  "/assets/imgs/partners/7.png",
+  "/assets/imgs/partners/8.png",
+];
 
 interface PropType {
-   style: boolean;
+  style: boolean;
 }
 
 const TextSlider = ({ style }: PropType) => {
-   return (
-      <section className={`text-slider-section section-space fix ${style ? "bg-color-1 is-dark" : ""}`}>
-         <div className="container-fluid">
-            <div className="text-slider-box">
-               {text_slider.map((item, i) => (
-                  <div key={i} className="slide-box">
-                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M30 0L38.1027 21.8973L60 30L38.1027 38.1027L30 60L21.8973 38.1027L0 30L21.8973 21.8973L30 0Z" fill="#EA1826" />
-                     </svg>
-                     <h1>{item}</h1>
-                  </div>
-               ))}
+  return (
+    <section
+      aria-label="Our partners"
+      className={`text-slider-section section-space fix ${style ? "bg-color-1 is-dark" : ""}`}
+    >
+      <div className="container-fluid">
+        <div className="partner-slider-track">
+          {[0, 1].map((copy) => (
+            <div
+              key={copy}
+              className="partner-slider-group"
+              aria-hidden={copy === 1 ? true : undefined}
+            >
+              {partner_images.map((src, index) => (
+                <div key={src} className="partner-slider-logo">
+                  <img
+                    src={src}
+                    width={200}
+                    height={96}
+                    alt={copy === 0 ? `Partner ${index + 1} logo` : ""}
+                  />
+                </div>
+              ))}
             </div>
-         </div>
-      </section>
-   )
-}
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default TextSlider
+export default TextSlider;

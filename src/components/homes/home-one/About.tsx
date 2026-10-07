@@ -64,11 +64,17 @@ const About = ({ style }: PropType) => {
               data-wow-delay="500ms"
             >
               <figure className="main-image m-img">
-                <img src="/assets/imgs/about/about-3.jpg" alt="" />
+                <img
+                  src="/assets/imgs/about/about-3.jpg"
+                  width={452}
+                  height={548}
+                  style={{ width: "452px", maxWidth: "100%", height: "548px", objectFit: "cover", display: "block" }}
+                  alt=""
+                />
               </figure>
-              <div className="small-image">
-                <img src="/assets/imgs/about/about-4.jpg" alt="" />
-              </div>
+              {/* <div className="small-image">
+                {/* <img src="/assets/imgs/about/about-4.jpeg" alt="" /> 
+              </div> */}
               <div className="icon-box">
                 <div className="icon">
                   <i className="icon-prize-1"></i>
