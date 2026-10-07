@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IcoMoon icon gallery | MB Universal Home</title>
+  <link rel="stylesheet" href="/assets/css/icomoon.css" />
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #172033; background: #f5f7fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 1160px; margin: 0 auto; padding: 32px 20px 60px; }
+    h1 { margin: 0 0 8px; font-size: clamp(26px, 4vw, 38px); }
+    p { margin: 0 0 20px; color: #526071; }
+    .toolbar { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    input { width: min(100%, 420px); padding: 12px 14px; border: 1px solid #ccd3de; border-radius: 8px; font: inherit; }
+    #count { color: #526071; white-space: nowrap; }
+    #icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+    .icon-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; min-height: 140px; padding: 18px 10px; border: 1px solid #e1e6ee; border-radius: 10px; background: #fff; color: inherit; cursor: pointer; font: inherit; }
+    .icon-card:hover, .icon-card:focus-visible { border-color: #e44436; box-shadow: 0 3px 14px #17203315; outline: none; }
+    .icon-card i { font-size: 44px; color: #102039; }
+    .icon-card code { font-size: 13px; overflow-wrap: anywhere; }
+    #status { min-height: 22px; margin-top: 16px; color: #526071; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>IcoMoon icons</h1>
+    <p>These are the icons available in this project's icon font. Click an icon to copy its CSS class name.</p>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search icons, e.g. roof" aria-label="Search icons" />
+      <span id="count"></span>
+    </div>
+    <div id="icons" aria-live="polite"></div>
+    <div id="status" role="status"></div>
+  </main>
+  <script>
+    const iconsElement = document.querySelector('#icons');
+    const countElement = document.querySelector('#count');
+    const statusElement = document.querySelector('#status');
+    const searchElement = document.querySelector('#search');
+    let icons = [];
+
+    function render() {
+      const query = searchElement.value.trim().toLowerCase();
+      const visible = icons.filter((name) => name.includes(query));
+      iconsElement.replaceChildren();
+      visible.forEach((name) => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'icon-card';
+        card.title = 'Copy ' + name;
+        const icon = document.createElement('i');
+        icon.className = name;
+        icon.setAttribute('aria-hidden', 'true');
+        const label = document.createElement('code');
+        label.textContent = name;
+        card.append(icon, label);
+        card.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(name);
+            statusElement.textContent = 'Copied ' + name;
+          } catch {
+            statusElement.textContent = 'Class name: ' + name;
+          }
+        });
+        iconsElement.append(card);
+      });
+      countElement.textContent = visible.length + ' of ' + icons.length + ' icons';
+    }
+
+    fetch('/assets/css/icomoon.css')
+      .then((response) => {
+        if (!response.ok) throw new Error('Could not load icon CSS');
+        return response.text();
+      })
+      .then((css) => {
+        icons = [...new Set([...css.matchAll(/\.(icon-[a-z0-9-]+):before\s*\{/gi)].map((match) => match[1]))];
+        render();
+      })
+      .catch(() => { statusElement.textContent = 'Could not load the icon list.'; });
+    searchElement.addEventListener('input', render);
+  </script>
+</body>
+</html>
