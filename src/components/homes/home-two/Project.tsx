@@ -58,7 +58,7 @@ const Project = () => {
             {project_data.filter((items) => items.page === "home_2").map((item) => (
                <SwiperSlide key={item.id} className="swiper-slide">
                   <div className="project-slider-area p-relative">
-                     <figure className="image w-img">
+                     <figure className="image w-img"> xxx
                         <img src={item.thumb} alt="" />
                      </figure>
                      <div className="content-area">

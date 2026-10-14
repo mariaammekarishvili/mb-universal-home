@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 interface DataType {
+  image: string;
   sub_title: string;
   title: string;
   feature_list: {
@@ -13,6 +14,7 @@ interface DataType {
 
 const choose_data: DataType[] = [
   {
+    image: "/assets/imgs/service/service-1.jpg",
     sub_title: "Drywall Installation & Finishing",
     title:
       "Expert sheetrock hanging, precision taping, and multi-coat mudding delivering perfectly smooth, paint-ready walls and ceilings for any interior space.",
@@ -24,6 +26,7 @@ const choose_data: DataType[] = [
     ],
   },
   {
+    image: "/assets/imgs/service/service-2.JPEG",
     sub_title: "Custom Wood & Metal Working",
     title:
       "Professional metal stud framing, structural wood framing, architectural woodwork, and custom carpentry built strictly to code for residential and commercial projects.",
@@ -35,6 +38,7 @@ const choose_data: DataType[] = [
     ],
   },
   {
+    image: "/assets/imgs/service/service-3.jpg",
     sub_title: "Drop Ceiling Services",
     title:
       "Professional suspended and acoustic ceiling installations designed for commercial offices, retail environments, and modern residential spaces.",
@@ -46,6 +50,7 @@ const choose_data: DataType[] = [
     ],
   },
   {
+    image: "/assets/imgs/service/service-4.jpg",
     sub_title: "Precision Tile Work Services",
     title:
       "Expert tile installation for floors, walls, backsplashes, and bathrooms, combining precise alignment with long-lasting durability.",
@@ -57,6 +62,7 @@ const choose_data: DataType[] = [
     ],
   },
   {
+    image: "/assets/imgs/service/service-5.jpg",
     sub_title: "Professional Painting Services",
     title:
       "High-end interior painting services that add the perfect finishing touch, utilizing premium paints for clean lines and vibrant, lasting results.",
@@ -72,7 +78,7 @@ const choose_data: DataType[] = [
 const ServiceNew = () => {
   return (
     <>
-      {choose_data.map(({ sub_title, title, feature_list }, index) => (
+      {choose_data.map(({ image, sub_title, title, feature_list }, index) => (
         <section key={sub_title} className="choose-section bg-color-1 section-space-top p-relative">
           <div className="bg-image"></div>
           <div
@@ -103,8 +109,12 @@ const ServiceNew = () => {
                 ))}
               </div>
               <div className="col-xxl-6 col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="1.2s">
-                <figure className="image m-img">
-                  <img src="/assets/imgs/resources/choose-1.png" alt="" />
+                <figure className="image m-img" style={{ display: "block", padding: 0 }}>
+                  <img
+                    src={image}
+                    alt={sub_title}
+                    style={{ display: "block", width: "100%", height: "auto", aspectRatio: "4 / 3", objectFit: "cover" }}
+                  />
                 </figure>
               </div>
             </div>

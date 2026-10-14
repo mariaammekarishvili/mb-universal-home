@@ -29,6 +29,7 @@ const AppNavigation = () => {
         <Route path="/services" element={<ServiceMain />} />
         <Route path="/services-details" element={<ServiceDetailsMain />} />
         <Route path="/projects" element={<ProjectMain />} />
+        <Route path="/projects/:projectPage" element={<ProjectMain />} />
         <Route path="/project-details" element={<ProjectDetailsMain />} />
         <Route path="/team" element={<TeamMain />} />
         <Route path="/team-details" element={<TeamDetailsMain />} />
