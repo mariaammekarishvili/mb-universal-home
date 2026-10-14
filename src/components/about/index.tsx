@@ -1,9 +1,9 @@
-import AboutHome from "../../components/homes/home-three/About";
+import AboutHome from "./About";
 import BreadCrumb from "../common/BreadCrumb";
-import Choose from "../homes/home-three/Choose";
+import Choose from "./Choose";
 import Process from "../homes/home-one/Process";
 import HeaderThree from "../../layouts/headers/HeaderThree";
-import FooterThree from "../../layouts/footers/FooterThree";
+import Footer from "../../layouts/footers/Footer";
 
 const About = () => {
   return (
@@ -14,10 +14,8 @@ const About = () => {
         <AboutHome />
         <Choose />
         <Process style={false} />
-        {/* <Team /> */}
-        {/* <Map /> */}
-        <FooterThree />
       </main>
+      <Footer />
     </>
   );
 };

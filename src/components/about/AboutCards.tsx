@@ -1,4 +1,4 @@
-import { businessSocials } from "../../../data/BusinessContact";
+import { businessSocials } from "../../data/BusinessContact";
 
 interface DataType {
   title: string;
@@ -96,10 +96,10 @@ const AboutCards = () => {
                       src={image}
                       alt={title}
                       width={402}
-                      height={411}
+                      height={511}
                       loading="lazy"
                       style={{
-                        aspectRatio: "402 / 411",
+                        aspectRatio: "402 / 511",
                         height: "auto",
                         objectFit: "cover",
                       }}
@@ -122,8 +122,8 @@ const AboutCards = () => {
                 </div>
               </div>
               <div className="col-lg-7">
-                <h5 className="pt-20">{title}</h5>
-                <h6 className="mb-25 mt-20 sub_title">{sub_title}</h6>
+                <h3 className="pt-20 text-m">{title}</h3>
+                <h5 className="mb-25 mt-20 sub_title">{sub_title}</h5>
                 <hr />
                 {desc_1 && <p className="mt-40 mb-40">{desc_1}</p>}
                 {items && (

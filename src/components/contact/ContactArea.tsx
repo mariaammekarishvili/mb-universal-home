@@ -39,7 +39,7 @@ const ContactArea = () => {
     <section className="contact-page-section section-space">
       <div className="small-container">
         <div className="row">
-          <div className="col-xxl-5 col-xl-5 col-lg-5">
+          <div className="col-xxl-5 col-xl-5 col-lg-5 pl-10">
             <div className="contact-p-info-area">
               {contact_data.map((item) => (
                 <div key={item.id} className="contact-box">

@@ -9,7 +9,7 @@ const NavMenu = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [navClick]);
+    }, [navClick])
 
     return (
         <ul>

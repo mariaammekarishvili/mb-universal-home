@@ -51,7 +51,7 @@ const Project = ({ style }: PropType) => {
          </div>
          <div className="container-fluid">
             <Swiper {...setting} modules={[Autoplay]} className="swiper project-active-1">
-               {project_data.filter((items) => items.page === "home_1").map((item) => (
+               {project_data.map((item) => (
                   <SwiperSlide key={item.id} className="swiper-slide">
                      <div className="project-slider-two-box p-relative">
                         <figure className="image w-img">
@@ -68,7 +68,7 @@ const Project = ({ style }: PropType) => {
                               <span>See more</span>
                               {/* <h5><Link to="/projects">{item.title}</Link></h5> */}
                            </div>
-                           <Link className="icon-1" to="/projects">
+                           <Link className="icon-1" to={`/projects/${item.page}`}>
                               <i className="icon-arrow-up"></i>
                            </Link>
                         </div>

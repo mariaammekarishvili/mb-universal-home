@@ -1,4 +1,4 @@
-import FooterThree from "../../layouts/footers/FooterThree";
+import Footer from "../../layouts/footers/Footer";
 import HeaderThree from "../../layouts/headers/HeaderThree";
 import BreadCrumb from "../common/BreadCrumb";
 import ContactArea from "./ContactArea";
@@ -10,9 +10,8 @@ const Contact = () => {
       <main>
         <BreadCrumb sub_title="Contact" title="Contact" />
         <ContactArea />
-        {/* <ContactMap /> */}
       </main>
-      <FooterThree />
+      <Footer />
     </>
   );
 };

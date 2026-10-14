@@ -21,14 +21,13 @@ const banner_data: DataType[] = [
     desc: (
       <>
         Professional sheetrock hanging, metal and wood framing, and structural
-        solutions for residential and commercial spaces across NY, NJ, CT, and
-        PA.
+        solutions for residential and commercial spaces across NY, NJ and PA.
       </>
     ),
   },
   {
     id: 2,
-    thumb: "assets/imgs/banner/banner-3.jpg",
+    thumb: "assets/imgs/resources/about-title-bg.jpg",
     sub_title: "PROFESSIONAL CRAFTSMANSHIP",
     title: "Flawless Taping, Mudding & Painting",
     desc: (
@@ -40,7 +39,7 @@ const banner_data: DataType[] = [
   },
   {
     id: 3,
-    thumb: "assets/imgs/banner/banner-3.jpg",
+    thumb: "assets/imgs/banner/banner-2.jpg",
     sub_title: "COMPLETE INTERIOR SOLUTIONS",
     title: "Tile Work, Flooring & Full Remodeling",
     desc: (

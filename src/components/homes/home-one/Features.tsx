@@ -24,7 +24,7 @@ const feature_data: DataType[] = [
     id: 3,
     icon: "icon-roof-6",
     title: "24/7 Support",
-    desc: "We work around the clock to meet your schedule, ensuring reliable communication and fast project turnaround.",
+    desc: "We work around the clock to meet your schedule and  ensuring reliable communication and fast project turnaround.",
   },
   {
     id: 4,

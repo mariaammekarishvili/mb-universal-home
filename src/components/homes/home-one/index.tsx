@@ -9,7 +9,7 @@ import Testimonial from "./Testimonial"
 import HelpForm from "./HelpForm"
 import Counter from "./Counter"
 import HeaderOne from "../../../layouts/headers/HeaderOne"
-import FooterOne from "../../../layouts/footers/FooterOne"
+import Footer from "../../../layouts/footers/Footer"
 
 const HomeOne = () => {
   return (
@@ -27,7 +27,7 @@ const HomeOne = () => {
         <Counter style={false} />
         <HelpForm />
       </main>
-      <FooterOne />
+      <Footer />
     </>
   )
 }

@@ -18,14 +18,8 @@ const menu_data: MenuItem[] = [
     {
         id: 1,
         title: "Home",
-        link: "#",
-        has_dropdown: true,
-        sub_menus: [
-            { link: "/", title: "Home One" },
-            { link: "/home-two", title: "Home Two" },
-            { link: "/home-three", title: "Home Three" },
-            { link: "/dark-home", title: "Home Dark" },
-        ],
+        link: "/",
+        has_dropdown: false,
     },
     {
         id: 2,
@@ -36,49 +30,15 @@ const menu_data: MenuItem[] = [
     {
         id: 3,
         title: "Services",
-        link: "#",
-        has_dropdown: true,
-        sub_menus: [
-            { link: "/services", title: "Services" },
-            { link: "/services-details", title: "Services Details" },
-        ],
+        link: "/services",
+        has_dropdown: false,
     },
     {
         id: 4,
-        title: "Pages",
-        link: "#",
-        has_dropdown: true,
-        sub_menus: [
-            {
-                link: "#",
-                title: "Projects",
-                mega_menus: [
-                    {
-                        title: "Projects",
+        title: "Projects",
                         link: "/projects",
-                    },
-                    {
-                        title: "Projects Details",
-                        link: "/project-details",
-                    }
-                ],
-            },
-            { link: "/team", title: "Team" },
-            { link: "/team-details", title: "Team Details" },
-            { link: "/faq", title: "Faq's" },
-            { link: "/not-found", title: "Error Page" },
-        ],
-    },
-    {
-        id: 5,
-        title: "Blog",
-        link: "#",
-        has_dropdown: true,
-        sub_menus: [
-            { link: "/blog-standard", title: "Blog Default" },
-            { link: "/blog-grid", title: "Blog Grid" },
-            { link: "/blog-details", title: "Blog Details" },
-        ],
+        has_dropdown: false,
+     
     },
     {
         id: 6,

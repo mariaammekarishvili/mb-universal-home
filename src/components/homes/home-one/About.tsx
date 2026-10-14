@@ -16,7 +16,7 @@ interface DataType {
 const about_data: DataType = {
   sub_title: "About Us",
   title: "Devoted to Delivering Top Notch Drywall & Renovation Solutions",
-  desc: " With over 9 years of combined experience, MB Universal Home provides expert drywall installation, metal framing, smooth taping, and complete interior finishes. We serve residential and commercial clients across NY, NJ, CT, and PA with unmatched precision and reliability.",
+  desc: " With over 9 years of combined experience, MB Universal Home provides expert drywall installation, metal framing, smooth taping, and complete interior finishes. We serve residential and commercial clients across NY, NJ and PA with unmatched precision and reliability.",
   feature_list: [
     {
       id: 1,
@@ -68,7 +68,13 @@ const About = ({ style }: PropType) => {
                   src="/assets/imgs/about/about-3.jpg"
                   width={452}
                   height={548}
-                  style={{ width: "452px", maxWidth: "100%", height: "548px", objectFit: "cover", display: "block" }}
+                  style={{
+                    width: "452px",
+                    maxWidth: "100%",
+                    height: "548px",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
                   alt=""
                 />
               </figure>

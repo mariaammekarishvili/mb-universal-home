@@ -1,4 +1,4 @@
-import FooterThree from "../../../layouts/footers/FooterThree"
+import Footer from "../../../layouts/footers/Footer"
 import HeaderThree from "../../../layouts/headers/HeaderThree"
 import BreadCrumb from "../../common/BreadCrumb"
 import BlogArea from "./BlogArea"
@@ -11,7 +11,7 @@ const BlogGrid = () => {
          <BreadCrumb sub_title="Blog Grid" title="Blog Grid" />
          <BlogArea />
       </main>
-      <FooterThree />
+      <Footer />
     </>
   )
 }

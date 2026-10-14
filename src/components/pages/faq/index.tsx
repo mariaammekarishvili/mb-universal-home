@@ -1,4 +1,4 @@
-import FooterThree from "../../../layouts/footers/FooterThree"
+import Footer from "../../../layouts/footers/Footer"
 import HeaderThree from "../../../layouts/headers/HeaderThree"
 import BreadCrumb from "../../common/BreadCrumb"
 import FaqArea from "./FaqArea"
@@ -11,7 +11,7 @@ const Faq = () => {
          <BreadCrumb sub_title="Faq" title="Faq" />
          <FaqArea />
       </main>
-      <FooterThree />
+      <Footer />
     </>
   )
 }

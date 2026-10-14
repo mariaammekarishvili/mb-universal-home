@@ -42,12 +42,13 @@ const project_data: DataType[] = [
     id: 3,
     page: "project-three",
     images: [
+      "/assets/imgs/project/project-three/7-gigapixel-scale-2_00x (2).jpg",
+
       "/assets/imgs/project/project-three/2-gigapixel-scale-2_00x (1).jpg",
       "/assets/imgs/project/project-three/3-gigapixel-scale-2_00x (1).jpg",
       "/assets/imgs/project/project-three/4-gigapixel-scale-2_00x.jpg",
       "/assets/imgs/project/project-three/5-gigapixel-scale-2_00x (2).jpg",
       "/assets/imgs/project/project-three/6-gigapixel-scale-2_00x (1).jpg",
-      "/assets/imgs/project/project-three/7-gigapixel-scale-2_00x (2).jpg",
     ],
     thumb: "/assets/imgs/project/project-n-1.jpg",
     sub_title: "Painting",
