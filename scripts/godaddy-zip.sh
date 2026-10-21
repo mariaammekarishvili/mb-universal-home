@@ -9,7 +9,9 @@ cd "$(dirname "$0")/.."
 OUT="$PWD/mb-universal-home-godaddy.zip"
 rm -f "$OUT"
 
-git ls-files --cached --others --exclude-standard \
+# .airo/ is gitignored (GoDaddy keeps its own copy when deploying from GitHub),
+# so add it by hand for ZIP uploads.
+{ git ls-files --cached --others --exclude-standard; echo .airo/config.json; } \
   | while IFS= read -r file; do [ -f "$file" ] && printf '%s\n' "$file"; done \
   | zip -qX "$OUT" -@
 

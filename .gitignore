@@ -27,3 +27,6 @@ dist-ssr
 /mb-universal-home/
 /user.name/
 *.zip
+
+# GoDaddy Node.js Hosting keeps its own copy of this folder; tracking it blocks GoDaddy's git pull
+.airo/
