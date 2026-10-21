@@ -20,3 +20,13 @@ npm run build
 ```
 
 Business phone, email, and social links are maintained in `src/data/BusinessContact.ts`.
+
+## Deploy to GoDaddy Node.js Hosting
+
+```bash
+npm run zip:godaddy
+```
+
+This checks that the site builds, then creates `mb-universal-home-godaddy.zip` with the app source (no `node_modules`, no `dist`). In GoDaddy Node.js Hosting, choose **Upload ZIP** and upload that file. GoDaddy runs `npm install`, `npm run build` and `npm start` (which runs `server.js`). `.airo/config.json` tells GoDaddy to serve the site with `npm start` instead of the Vite dev server, and `vite.config.ts` uses GoDaddy's `PORT` if Vite is run there anyway.
+
+GoDaddy installs only `dependencies`, so packages the build needs (Vite, TypeScript, React types) must stay in `dependencies`, not `devDependencies`.
