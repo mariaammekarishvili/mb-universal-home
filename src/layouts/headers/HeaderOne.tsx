@@ -1,5 +1,6 @@
 import { businessContact } from "../../data/BusinessContact";
 import NavMenu from "./Menu/NavMenu";
+import HeaderTwoTop from "./Menu/HeaderTwoTop";
 import { useState } from "react";
 import Offcanvas from "./Menu/Offcanvas";
 import HeaderSearch from "./Menu/HeaderSearch";
@@ -14,11 +15,12 @@ const HeaderOne = () => {
   return (
     <>
       <header>
+        <HeaderTwoTop />
         <div
           id="header-sticky"
           className={`header-area header-style-two ${sticky ? "sticky" : ""}`}
         >
-          <div className="large-container">
+          <div className="large-container header-p">
             <div className="mega-menu-wrapper">
               <div className="header-main">
                 <div className="header-left">

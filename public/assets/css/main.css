@@ -322,6 +322,9 @@ figure{
   margin: 0 auto;
   padding: 0 15px;
 }
+.large-container.header-p {
+  padding: 0 84px;
+}
 
 .large-container-1 {
   max-width: 1740px;
@@ -1876,6 +1879,13 @@ figure{
   position: absolute;
   top: 0;
   left: -25px;
+}
+
+.header-top-contact-info .location-pin {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
 }
 
 .header-top-socials {
@@ -4687,6 +4697,34 @@ transform: skewX(-25deg);
 
 .service-tab-btn-area ul .nav-link.active .icon-box {
     color: #fff;
+}
+
+/* Keep every service panel sized to the tallest tab and its column. */
+.service-tab-details-area {
+  height: 100%;
+}
+
+.service-tab-details-area > .tab-content {
+  display: grid;
+  height: 100%;
+}
+
+.service-tab-details-area > .tab-content > .tab-pane {
+  display: block;
+  grid-area: 1 / 1;
+  min-width: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.service-tab-details-area > .tab-content > .tab-pane.active {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.service-tab-details-area .service-tab-content {
+  height: 100%;
+  margin-top: 0;
 }
 
 .service-tab-content {

@@ -20,7 +20,7 @@ const HeaderThree = () => {
           id="header-sticky"
           className={`header-area ${sticky ? "sticky" : ""}`}
         >
-          <div className="large-container">
+          <div className="large-container header-p">
             <div className="mega-menu-wrapper">
               <div className="header-main">
                 <div className="header-left">

@@ -68,7 +68,7 @@ const Testimonial = () => {
               </div>
               <p className="mb-40">
                 {" "}
-                With over 9 years of combined experience, MB Universal Home
+                With over 15 years of combined experience, MB Universal Home
                 provides expert drywall installation, metal framing, smooth
                 taping, and complete interior finishes. We serve residential and
                 commercial clients across NY, NJ and PA with unmatched precision
@@ -93,7 +93,7 @@ const Testimonial = () => {
                           </div>
                           <div className="author-info">
                             <h5>{item.name}</h5>
-                            <span>{item.designation}</span>
+                            {/* <span>{item.designation}</span> */}
                             <ul className="rating-list">
                               <li>
                                 <i className="fa fa-star"></i>

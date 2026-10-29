@@ -17,36 +17,32 @@ const banner_data: DataType[] = [
     id: 1,
     thumb: "assets/imgs/banner/banner-3.jpg",
     sub_title: "PROVIDE THE BEST SERVICES",
-    title: "Expert Drywall Installation & Framing",
+    title: "DRYWALL & FINISHES",
     desc: (
       <>
-        Professional sheetrock hanging, metal and wood framing, and structural
-        solutions for residential and commercial spaces across NY, NJ and PA.
+        Flawless Drywall, Taping & Interior Painting From clean sheetrock installation and seamless taping to Level 4/5 smooth finishes and precision painting for a flawless interior. 
       </>
     ),
   },
   {
     id: 2,
     thumb: "assets/imgs/resources/about-title-bg.jpg",
-    sub_title: "PROFESSIONAL CRAFTSMANSHIP",
-    title: "Flawless Taping, Mudding & Painting",
+    sub_title: "PROVIDE THE BEST SERVICES",
+    title: " STRUCTURAL FRAMING ",
     desc: (
       <>
-        Multi-coat joint compound finishing, smooth sanding, and premium
-        interior painting for a seamless, paint-ready surface.
+        Precision Metal & Wood Framing Solutions Code-compliant metal stud framing and heavy-duty structural wood framing built for lasting strength, safety, and durability.
       </>
     ),
   },
   {
     id: 3,
     thumb: "assets/imgs/banner/banner-2.jpg",
-    sub_title: "COMPLETE INTERIOR SOLUTIONS",
-    title: "Tile Work, Flooring & Full Remodeling",
+    sub_title: "PROVIDE THE BEST SERVICES",
+    title: "INTERIOR SOLUTIONS",
     desc: (
       <>
-        {" "}
-        From custom tile installations to complete interior renovations, our
-        experienced team delivers top-quality results on time and on budget.
+        Suspended Ceilings & Expert Tile Installation Precision grid drop ceilings and premium custom tile setting engineered for commercial durability and clean residential aesthetics.
       </>
     ),
   },

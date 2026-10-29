@@ -19,7 +19,7 @@ interface DataType {
 const about_data: DataType = {
   sub_title: "ABOUT MB UNIVERSAL HOME",
   title:
-    "Building Excellence, Crafting Interiors, and Delivering Perfection Across NY, NJ & PA",
+    "Building Excellence, Crafting Interiors, and Delivering Perfection Across NJ",
   desc: "Welcome to MB Universal Home LLC, your trusted partner for high-end drywall, framing, and complete interior renovation services. Based and operating across New York, New Jersey, Connecticut, and Pennsylvania, we combine years of hands-on industry experience with a strict commitment to superior craftsmanship. Whether it’s a residential home upgrade or a large-scale commercial project, our team brings precision, reliability, and attention to detail to every single square foot we touch.",
   feature_list: [
     {
@@ -41,7 +41,7 @@ const { sub_title, title, desc, feature_list } = about_data;
 
 const About = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  return (<AboutCards />);
+  return <AboutCards />;
   return (
     <>
       <section className="about-us-section section-space p-relative">

@@ -41,11 +41,15 @@ const Footer = () => {
           ></div>
           <div className="footer-top section-space-medium">
             <div className="small-container">
-              <div className="row g-4">
+              <div className="row g-4 justify-between" style={{ justifyContent: "space-between" }}>
                 <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
                   <div className="footer-widget-1">
                     <figure className="image">
-                      <img src="/assets/imgs/logo/logo-white.png" style={{ height: "95px" }} alt="" />
+                      <img
+                        src="/assets/imgs/logo/logo-white.png"
+                        style={{ height: "95px" }}
+                        alt=""
+                      />
                     </figure>
                     <p className="mt-20 mb-10">
                       Expert Drywall Installation & Framing
@@ -53,14 +57,14 @@ const Footer = () => {
                     <p>
                       {" "}
                       Building Excellence, Crafting Interiors, and Delivering
-                      Perfection Across NY, NJ & PA
+                      Perfection Across NJ
                     </p>
                     <div className="working-hours">
                       <h6 className="text-white mb-20">Working Hours:</h6>
                       <ul className="text-white">
                         <li>
-                          Mon - Sun:{" "}
-                          <span className="fw-lighter">06:00AM - 12:00AM</span>
+                          Mon - Sat:{" "}
+                          <span className="fw-lighter">07:00AM - 6:00PM</span>
                         </li>
                       </ul>
                     </div>
@@ -92,7 +96,7 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
+                {/* <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
                   <div className="footer-widget-4 pr-30">
                     <h4 className="mb-20 footer-title mb-30">Our Gallery</h4>
                     <div className="footer-gallery p-relative">
@@ -125,7 +129,7 @@ const Footer = () => {
                       ))}
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -20,14 +20,14 @@ const counter_data: DataType[] = [
       id: 2,
       icon: "icon-team",
       number: 30,
-      title: "Company Staffs",
+      title: "Completed Projects",
       number_text: "+"
    },
    {
       id: 3,
       icon: "icon-prize-box",
-      number: 150,
-      title: "Tons of Products",
+      number: 100,
+      title: "Satisfaction Guaranteed",
    },
    {
       id: 4,
