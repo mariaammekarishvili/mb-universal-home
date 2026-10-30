@@ -86,7 +86,7 @@ const Choose = () => {
           >
             <figure className="image m-img">
               <img
-                src="/assets/imgs/resources/choose-1.jpg"
+                src="/assets/imgs/bg/10.jpg"
                 width="600"
                 alt=""
               />

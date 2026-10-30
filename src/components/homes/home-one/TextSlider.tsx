@@ -21,6 +21,9 @@ const TextSlider = ({ style }: PropType) => {
       aria-label="Our partners"
       className={`text-slider-section section-space fix ${style ? "bg-color-1 is-dark" : ""}`}
     >
+      <h3 className="title-box text-center mb-60 wow fadeInLeft">
+        Trusted Brands & Quality Materials
+      </h3>
       <div className="container-fluid">
         <div className="partner-slider-track">
           {[0, 1].map((copy) => (

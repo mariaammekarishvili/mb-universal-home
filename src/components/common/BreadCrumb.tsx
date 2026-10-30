@@ -46,7 +46,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
                   <ul>
                     <li>
                       <span>
-                        <Link to="/">Home</Link>
+                        <Link className={"text-black"} to="/">Home</Link>
                       </span>
                     </li>
                     <li>

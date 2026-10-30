@@ -14,36 +14,25 @@ interface DataType {
 const service_data: DataType[] = [
   {
     id: 1,
-    icon: "icon-engineer",
-    thumb: "/assets/imgs/resources/service-1.jpg",
-    title: "Drop Ceilings Services",
-    tabTitle: "Suspended and acoustic ceiling installation for commercial and residential properties. ",
-    desc: "Transform your interior spaces with custom drop ceiling solutions engineered for optimal acoustic control, sleek aesthetics, and easy utility access. We deliver precision grid layouts and long-lasting panel systems for commercial and residential properties across New Jersey.",
+    icon: "icon-hammer",
+    tabTitle:
+      "Precision wood and metal stud framing, interior partition walls, complete door installation, baseboards, and architectural trim. ",
+    thumb: "/assets/imgs/resources/service-4.jpg",
+    title: "Custom Wood & Metal Framing",
+    desc: "We provide comprehensive interior framing and carpentry solutions for residential and commercial spaces. Our work covers solid wood and metal stud partition walls, precise door frame and slab installation (including pre-hung and pocket doors), baseboards, door casing, and clean finish trim work built straight, plumb, and square.",
     list: [
-      "Acoustic & Noise Control",
-      "Precision Grid & Panel Installation",
-      "Seamless Utility & Lighting Integration",
+      "Wall Framing & Partitions",
+      "Complete Door Installation",
+      "Baseboards & Finish Trim",
     ],
   },
   {
     id: 2,
-    icon: "icon-home-1",
-    thumb: "/assets/imgs/resources/service-2.jpg",
-    title: "Professional Painting Services",
-    tabTitle:"Clean interior and exterior painting with thorough prep work and lasting finishes.",
-    desc: "Expert interior and exterior painting, priming, and surface preparation. We give your newly renovated spaces a polished, vibrant, and long-lasting finish.",
-    list: [
-      "High-End Interior Painting",
-      "Surface Preparation & Priming",
-      "Premium Quality Coatings",
-    ],
-  },
-  {
-    id: 3,
     icon: "icon-home",
-    tabTitle: "Precision drywall hanging, seamless taping, and Level 5 smooth finishes. ",
-    thumb: "/assets/imgs/resources/service-3.jpg",
-    title: "Drywall Installation",
+    tabTitle:
+      "Precision drywall hanging, seamless taping, and Level 5 smooth finishes. ",
+    thumb: "/assets/imgs/resources/service-new-3.jpg",
+    title: "Level 5 Drywall & Finishing",
     desc: "Expert sheetrock hanging, metal and wood framing, and multi-coat joint compound finishing. We build sturdy walls and ceilings with smooth, paint-ready surfaces.",
     list: [
       "Precise Wall & Ceiling Hanging",
@@ -52,29 +41,45 @@ const service_data: DataType[] = [
     ],
   },
   {
-    id: 4,
-    icon: "icon-hammer",
-    tabTitle: "Custom cabinetry, premium countertops, and high-end finish trim work. ",
-    thumb: "/assets/imgs/resources/service-4.jpg",
-    title: "Custom Carpentry",
-    desc: "We provide custom carpentry solutions designed to enhance the beauty, functionality, and value of your space. From custom cabinets and countertops to detailed finish trim, our work combines quality materials, precise installation, and attention to every detail.",
+    id: 3,
+    icon: "icon-engineer",
+    thumb: "/assets/imgs/resources/service-1.jpg",
+    title: "Commercial Drop Ceilings",
+    tabTitle:
+      "Suspended and acoustic ceiling installation for commercial and residential properties. ",
+    desc: "Transform your interior spaces with custom drop ceiling solutions engineered for optimal acoustic control, sleek aesthetics, and easy utility access. We deliver precision grid layouts and long-lasting panel systems for commercial and residential properties across New Jersey.",
     list: [
-      "Custom Cabinetry",
-      "Countertop Installation",
-      "Finish Trim & Details",
+      "Acoustic & Noise Control",
+      "Precision Grid & Panel Installation",
+      "Seamless Utility & Lighting Integration",
     ],
   },
   {
-    id: 5,
+    id: 4,
     icon: "icon-help",
-    tabTitle: "Flawless tile setting for kitchens, bathrooms, walk-in showers, and floors.",
+    tabTitle:
+      "Flawless tile setting for kitchens, bathrooms, walk-in showers, and floors.",
     thumb: "/assets/imgs/resources/service-5.jpg",
-    title: "Tile Installation",
+    title: "Kitchen & Bathroom Tile Work",
     desc: "Exceptional tile installation for floors, walls, kitchens, and bathrooms. We deliver durable, beautiful, and precise tile layouts tailored to your interior design.",
     list: [
       "Kitchen & Bathroom Tiling",
       "Floor & Wall Tile Setting",
       "Clean & Detailed Finish",
+    ],
+  },
+  {
+    id: 5,
+    icon: "icon-home-1",
+    thumb: "/assets/imgs/resources/service-2.jpg",
+    title: "Interior Painting & trims",
+    tabTitle:
+      "Clean interior and exterior painting with thorough prep work and lasting finishes.",
+    desc: "Expert interior and exterior painting, priming, and surface preparation. We give your newly renovated spaces a polished, vibrant, and long-lasting finish.",
+    list: [
+      "High-End Interior Painting",
+      "Surface Preparation & Priming",
+      "Premium Quality Coatings",
     ],
   },
 ];
@@ -112,7 +117,7 @@ const Service = ({ style }: PropType) => {
           <div className="title-box wow fadeInLeft" data-wow-delay=".5s">
             <span className="section-sub-title">WHAT WE DO</span>
             <h3 className="section-title mt-10 text-white p-relative">
-              Delivering High Quality Interior <br /> & Renovation Services
+              Delivering High-Quality Interior <br /> & Renovation Services
             </h3>
           </div>
           <Link className="primary-btn-4 btn-hover mt-20" to="/services">

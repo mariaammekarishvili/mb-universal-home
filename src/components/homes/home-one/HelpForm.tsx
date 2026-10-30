@@ -26,7 +26,7 @@ const HelpForm = () => {
           <div className="col-xxl-8 col-xl-8 col-lg-8">
             <div className="help-form-area">
               <h3 className="section-title mb-40 text-white">
-                Ready to start our next project together? Let's get in touch!
+                Ready to start next project together? Let's get in touch!
               </h3>
               <div className="inner p-relative">
                 <form onSubmit={(e) => e.preventDefault()}>

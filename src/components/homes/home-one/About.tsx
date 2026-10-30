@@ -1,7 +1,6 @@
 import { businessContact } from "../../../data/BusinessContact";
 
 import { Link } from "react-router-dom";
-import Count from "../../common/Count";
 
 interface DataType {
   sub_title: string;
@@ -16,7 +15,7 @@ interface DataType {
 const about_data: DataType = {
   sub_title: "About Us",
   title: "Devoted to Delivering Top Notch Drywall & Renovation Solutions",
-  desc: " With over 15 years of combined experience, MB Universal Home provides expert drywall installation, metal framing, smooth taping, and complete interior finishes. We serve residential and commercial clients across NY, NJ and PA with unmatched precision and reliability.",
+  desc: " With over 15 years of combined experience, MB Universal Home provides expert drywall installation, metal framing, smooth taping, and complete interior finishes. We serve residential and commercial clients across NJ with unmatched precision and reliability.",
   feature_list: [
     {
       id: 1,
@@ -29,7 +28,7 @@ const about_data: DataType = {
     {
       id: 2,
       list: [
-        "200+ Completed Projects",
+        "250+ Completed Projects",
         "Expert Framing & Finishing",
         "Clean & Reliable Work",
       ],
@@ -81,7 +80,7 @@ const About = ({ style }: PropType) => {
               {/* <div className="small-image">
                 {/* <img src="/assets/imgs/about/about-4.jpeg" alt="" /> 
               </div> */}
-              <div className="icon-box">
+              {/* <div className="icon-box">
                 <div className="icon">
                   <i className="icon-prize-1"></i>
                 </div>
@@ -94,7 +93,7 @@ const About = ({ style }: PropType) => {
                   </h3>
                   <p>World Best Drywalling Award Got</p>
                 </div>
-              </div>
+              </div> */}
               <div
                 className="shape-1"
                 style={{

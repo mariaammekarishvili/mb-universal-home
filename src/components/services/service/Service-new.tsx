@@ -3,35 +3,40 @@ import "./Service-new.css";
 
 const services = [
   {
-    title: "Drop Ceilings",
+    image: "/assets/imgs/service/service-n-3.jpg",
+    title: "Custom Wood & Metal Framing",
     description:
-      "Suspended ceiling installation for commercial and residential properties.",
+      "Precision wood and metal stud framing, interior partition walls, complete door installation, baseboards, and architectural trim. ",
     details:
-      "Transform your interior space with custom drop ceiling solutions engineered for acoustic control and clean design. We specialize in suspended grid systems, acoustic panel installation, and seamless utility integration for commercial and residential properties across New Jersey.",
+      "We provide comprehensive interior framing and carpentry solutions for residential and commercial spaces. Our work covers solid wood and metal stud partition walls, precise door frame and slab installation (including pre-hung and pocket doors), baseboards, door casing, and clean finish trim work built straight, plumb, and square",
   },
   {
-    title: "Drywall Services",
+    image: "/assets/imgs/service/service-n-2.jpg",
+    title: "Level 5 Drywall & Finishing",
     description:
       "Precision drywall hanging, seamless taping, and Level 5 smooth finishes.",
     details:
       "Achieve flawless interior walls with our expert sheetrock hanging, seamless taping, and Level 5 smooth finishes. We deliver code-compliant drywall solutions and meticulous surface preparation for residential and commercial properties across New Jersey.",
   },
   {
-    title: "Custom Carpentry",
+    image: "/assets/imgs/service/service-n-1.jpg",
+    title: "Commercial Drop Ceilings",
     description:
-      "Custom cabinetry, premium countertops, and high-end finish trim work.",
+      "Suspended ceiling installation for commercial and residential properties.",
     details:
-      "Enhance your interiors with tailored architectural woodwork, custom cabinetry, and precision trim installation. From kitchen countertops to high-end finish carpentry, we craft durable, elegant solutions designed for lasting quality.",
+      "Transform your interior space with custom drop ceiling solutions engineered for acoustic control and clean design. We specialize in suspended grid systems, acoustic panel installation, and seamless utility integration for commercial and residential properties across New Jersey.",
   },
   {
-    title: "Tile Installation",
+    image: "/assets/imgs/service/service-n-4.jpg",
+    title: "Kitchen & Bathroom Tile Work",
     description:
       "Flawless tile setting for kitchens, bathrooms, walk-in showers, and floors.",
     details:
       "Transform your kitchens, bathrooms, and floors with high-precision tile setting and custom layout designs. From waterproof walk-in showers to stylish backsplashes, we deliver durable, flawless finishes built to handle daily wear.",
   },
   {
-    title: "Professional Painting",
+    image: "/assets/imgs/service/service-n-5.jpg",
+    title: "Interior Painting & trims",
     description:
       "Clean interior and exterior painting with thorough prep work and lasting finishes.",
     details:
@@ -60,7 +65,7 @@ const ServiceNew = () => {
         craftsmanship, reliability, and attention to detail.
       </p>
       <div className="service-cards-grid">
-        {services.map(({ title, description, details }, index) => {
+        {services.map(({ title, description, details, image }, index) => {
           const expanded = expandedCards.includes(index);
           const detailsId = `service-details-${index + 1}`;
 
@@ -68,7 +73,7 @@ const ServiceNew = () => {
             <article className="service-card" key={title}>
               <img
                 className="service-card-image"
-                src={`/assets/imgs/service/service-n-${index + 1}.jpg`}
+                src={image}
                 alt={title}
                 loading="lazy"
                 width={480}
