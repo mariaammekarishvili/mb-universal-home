@@ -14,7 +14,7 @@ interface DataType {
 const about_data: DataType[] = [
   {
     title: "ABOUT MB UNIVERSAL HOME",
-    image: "/assets/imgs/about/about-3.jpg",
+    image: "/assets/imgs/about/about-n-3.jpg",
     sub_title: "Quality Craftsmanship. Exceptional Interiors. Built to Last.",
     desc_1: "Welcome to MB Universal Home Remodeling LLC, your trusted partner for drywall installation, drop ceilings, custom carpentry, tile installation, and professional painting. Serving residential and commercial clients throughout New Jersey, we focus on quality workmanship, attention to detail, and dependable service. Whether you're updating a single room or renovating an entire property, we work to bring your vision to life with care and precision.",
   },

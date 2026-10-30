@@ -65,7 +65,7 @@ const About = ({ style }: PropType) => {
             >
               <figure className="main-image m-img">
                 <img
-                  src="/assets/imgs/about/about-3.jpg"
+                  src="/assets/imgs/about/about-n-3.jpg"
                   width={452}
                   height={548}
                   style={{
