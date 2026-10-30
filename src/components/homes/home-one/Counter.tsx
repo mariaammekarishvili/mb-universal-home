@@ -53,7 +53,7 @@ const Counter = ({ style }: PropType) => {
                            <i className={item.icon}></i>
                         </div>
                         <div className="content">
-                           <h3><span className="counter"><Count number={item.number} /></span>{item.number_text}</h3>
+                           <h3><span className="counter"><Count number={item.number} />{item.id == 3 && `%`}</span>{item.number_text}</h3>
                            <span className="text-1">{item.title}</span>
                         </div>
                      </div>
