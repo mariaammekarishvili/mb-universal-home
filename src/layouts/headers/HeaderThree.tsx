@@ -26,7 +26,7 @@ const HeaderThree = () => {
                 <div className="header-left">
                   <div className="header-logo">
                     <Link to="/">
-                      <img src="/assets/imgs/logo/logo.png" style={{ height: "87px" }} alt="header logo" />
+                      <img src="/assets/imgs/logo/logo.png" style={{ width: "97px" }} alt="header logo" />
                     </Link>
                   </div>
                 </div>

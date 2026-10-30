@@ -24,7 +24,7 @@ const Offcanvas = ({ style, offCanvas, setOffCanvas }: MobileSidebarProps) => {
                     <img
                       src="/assets/imgs/logo/logo.png"
                       alt="Header Logo"
-                      style={{ height: "87px" }}
+                      style={{ width: "95px" }}
                     />
                   </Link>
                 </div>

@@ -45,7 +45,7 @@ const Footer = () => {
                     <figure className="image">
                       <img
                         src="/assets/imgs/logo/logo-white.png"
-                        style={{ height: "95px" }}
+                        style={{ width: "98px" }}
                         alt=""
                       />
                     </figure>

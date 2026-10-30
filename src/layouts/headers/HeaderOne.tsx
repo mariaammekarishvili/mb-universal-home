@@ -29,7 +29,7 @@ const HeaderOne = () => {
                       <img
                         src="/assets/imgs/logo/logo-white.png"
                         alt="header logo"
-                        style={{ height: "87px" }}
+                        style={{ width: "100px" }}
                       />
                     </Link>
                   </div>
