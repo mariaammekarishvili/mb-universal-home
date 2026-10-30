@@ -28,7 +28,7 @@ const banner_data: DataType[] = [
   },
   {
     id: 2,
-    thumb: "assets/imgs/resources/banner-3.jpg",
+    thumb: "assets/imgs/banner/main-2.jpg",
     sub_title: "PROVIDE THE BEST SERVICES",
     title: " STRUCTURAL FRAMING ",
     desc: (
