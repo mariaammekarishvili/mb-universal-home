@@ -14,11 +14,6 @@ const Footer = () => {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
-  const handleOpen = (i: number) => {
-    setIndex(i);
-    setOpen(true);
-  };
-
   const slides = gallery_data.map((image) => ({
     src: image.src,
   }));
@@ -41,7 +36,10 @@ const Footer = () => {
           ></div>
           <div className="footer-top section-space-medium">
             <div className="small-container">
-              <div className="row g-4 justify-between" style={{ justifyContent: "space-between" }}>
+              <div
+                className="row g-4 justify-between"
+                style={{ justifyContent: "space-between" }}
+              >
                 <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
                   <div className="footer-widget-1">
                     <figure className="image">
