@@ -1,127 +1,106 @@
-import { Link } from "react-router-dom";
-import React from "react";
+import { useState } from "react";
+import "./Service-new.css";
 
-interface DataType {
-  image: string;
-  sub_title: string;
-  title: string;
-  feature_list: {
-    id: number;
-    icon: string;
-    title: string;
-  }[];
-}
-
-const choose_data: DataType[] = [
+const services = [
   {
-    image: "/assets/imgs/service/service-1.jpg",
-    sub_title: "Drywall Installation & Finishing",
-    title:
-      "Expert sheetrock hanging, precision taping, and multi-coat mudding delivering perfectly smooth, paint-ready walls and ceilings for any interior space.",
-    feature_list: [
-      { id: 1, icon: "icon-team-1", title: "Residential & Commercial Sheetrock Hanging" },
-      { id: 2, icon: "icon-target", title: "Professional Taping, Mudding & Sanding" },
-      { id: 3, icon: "icon-help", title: "Soundproofing & Moisture-Resistant Drywall Options" },
-      { id: 4, icon: "icon-help", title: "Flawless, Seamless, Paint-Ready Finishes" },
-    ],
+    title: "Drop Ceilings",
+    description:
+      "Suspended ceiling installation for commercial and residential properties.",
+    details:
+      "Transform your interior space with custom drop ceiling solutions engineered for acoustic control and clean design. We specialize in suspended grid systems, acoustic panel installation, and seamless utility integration for commercial and residential properties across New Jersey.",
   },
   {
-    image: "/assets/imgs/service/service-2.JPEG",
-    sub_title: "Custom Wood & Metal Working",
-    title:
-      "Professional metal stud framing, structural wood framing, architectural woodwork, and custom carpentry built strictly to code for residential and commercial projects.",
-    feature_list: [
-      { id: 1, icon: "icon-round-check", title: "Metal Stud & Wood Framing Layouts" },
-      { id: 2, icon: "icon-round-check", title: "Structural Support & Partition Walls" },
-      { id: 3, icon: "icon-round-check", title: "Custom Carpentry & Architectural Woodwork" },
-      { id: 4, icon: "icon-round-check", title: "Precision Execution Built Strictly to Code" },
-    ],
+    title: "Drywall Services",
+    description:
+      "Precision drywall hanging, seamless taping, and Level 5 smooth finishes.",
+    details:
+      "Achieve flawless interior walls with our expert sheetrock hanging, seamless taping, and Level 5 smooth finishes. We deliver code-compliant drywall solutions and meticulous surface preparation for residential and commercial properties across New Jersey.",
   },
   {
-    image: "/assets/imgs/service/service-3.jpg",
-    sub_title: "Drop Ceiling Services",
-    title:
-      "Professional suspended and acoustic ceiling installations designed for commercial offices, retail environments, and modern residential spaces.",
-    feature_list: [
-      { id: 1, icon: "icon-round-check", title: "Suspended & Acoustic Ceiling Systems" },
-      { id: 2, icon: "icon-round-check", title: "Perfect Utility & Lighting Integration" },
-      { id: 3, icon: "icon-round-check", title: "Commercial Offices & Retail Fit-Outs" },
-      { id: 4, icon: "icon-round-check", title: "Sound Absorption & Modern Aesthetics" },
-    ],
+    title: "Custom Carpentry",
+    description:
+      "Custom cabinetry, premium countertops, and high-end finish trim work.",
+    details:
+      "Enhance your interiors with tailored architectural woodwork, custom cabinetry, and precision trim installation. From kitchen countertops to high-end finish carpentry, we craft durable, elegant solutions designed for lasting quality.",
   },
   {
-    image: "/assets/imgs/service/service-4.jpg",
-    sub_title: "Precision Tile Work Services",
-    title:
-      "Expert tile installation for floors, walls, backsplashes, and bathrooms, combining precise alignment with long-lasting durability.",
-    feature_list: [
-      { id: 1, icon: "icon-round-check", title: "Floor & Wall Tile Installation" },
-      { id: 2, icon: "icon-round-check", title: "Custom Kitchen Backsplashes" },
-      { id: 3, icon: "icon-round-check", title: "Bathroom & Shower Tiling" },
-      { id: 4, icon: "icon-round-check", title: "Precise Leveling & Grouting" },
-    ],
+    title: "Tile Installation",
+    description:
+      "Flawless tile setting for kitchens, bathrooms, walk-in showers, and floors.",
+    details:
+      "Transform your kitchens, bathrooms, and floors with high-precision tile setting and custom layout designs. From waterproof walk-in showers to stylish backsplashes, we deliver durable, flawless finishes built to handle daily wear.",
   },
   {
-    image: "/assets/imgs/service/service-5.jpg",
-    sub_title: "Professional Painting Services",
-    title:
-      "High-end interior painting services that add the perfect finishing touch, utilizing premium paints for clean lines and vibrant, lasting results.",
-    feature_list: [
-      { id: 1, icon: "icon-round-check", title: "Premium Interior Wall & Ceiling Painting" },
-      { id: 2, icon: "icon-round-check", title: "Trim, Baseboard & Molding Painting" },
-      { id: 3, icon: "icon-round-check", title: "Meticulous Surface Prep & Priming" },
-      { id: 4, icon: "icon-round-check", title: "Clean Lines & Flawless Coats" },
-    ],
+    title: "Professional Painting",
+    description:
+      "Clean interior and exterior painting with thorough prep work and lasting finishes.",
+    details:
+      "Protect and refresh your property with full-service interior and exterior painting solutions. We provide meticulous surface preparation, crisp lines, and premium finishes designed for long-lasting color and durability.",
   },
 ];
 
 const ServiceNew = () => {
+  const [expandedCards, setExpandedCards] = useState<number[]>([]);
+
+  const toggleCard = (index: number) => {
+    setExpandedCards((current) =>
+      current.includes(index)
+        ? current.filter((card) => card !== index)
+        : [...current, index],
+    );
+  };
+
   return (
-    <>
-      {choose_data.map(({ image, sub_title, title, feature_list }, index) => (
-        <section key={sub_title} className="choose-section bg-color-1 section-space-top p-relative">
-          <div className="bg-image"></div>
-          <div
-            className="shape-image"
-            style={{ backgroundImage: `url(/assets/imgs/shapes/shape-15.png)` }}
-          ></div>
-          <div className="small-container">
-            <div className={`row g-4 ${index % 2 === 1 ? "flex-lg-row-reverse" : ""}`}>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 p-relative section-space-medium-bottom">
-                <div className="title-box mb-50 wow fadeInLeft" data-wow-delay=".5s">
-                  <span className="section-sub-title">{sub_title}</span>
-                  <h4 className="text-white text-sm! mt-10">{title}</h4>
-                </div>
-                {feature_list.map((item) => (
-                  <React.Fragment key={item.id}>
-                    <div
-                      className="choose-area-icon-box mb-15 mt-10! wow items-center fadeInRight"
-                      data-wow-delay=".5s"
-                    >
-                      <div className="content">
-                        <h5>
-                          <Link to="/services">• {item.title}</Link>
-                        </h5>
-                      </div>
-                    </div>
-                    <hr />
-                  </React.Fragment>
-                ))}
+    <section className="service-cards-section" aria-label="Our services">
+      <p  style={{ textAlign: "center",fontSize: "20px", marginBottom: "50px", maxWidth: "80%", marginLeft: "auto", marginRight: "auto"  }}>
+        We specialize in professional drop ceiling installation, drywall
+        services, custom carpentry, tile installation, and interior painting for
+        residential and commercial properties throughout New Jersey. We deliver
+        quality installation and renovation services with a focus on
+        craftsmanship, reliability, and attention to detail.
+      </p>
+      <div className="service-cards-grid">
+        {services.map(({ title, description, details }, index) => {
+          const expanded = expandedCards.includes(index);
+          const detailsId = `service-details-${index + 1}`;
+
+          return (
+            <article className="service-card" key={title}>
+              <img
+                className="service-card-image"
+                src={`/assets/imgs/service/service-n-${index + 1}.jpg`}
+                alt={title}
+                loading="lazy"
+                width={480}
+                height={360}
+              />
+              <div className="service-card-content">
+                <h2 className="service-card-title">{title}</h2>
+                <p className="service-card-description">{description}</p>
+                <p
+                  className="service-card-details"
+                  id={detailsId}
+                  hidden={!expanded}
+                >
+                  {details}
+                </p>
+                <button
+                  className="service-card-toggle"
+                  type="button"
+                  aria-expanded={expanded}
+                  aria-controls={detailsId}
+                  aria-label={`${expanded ? "Show less" : "Show more"} about ${title}`}
+                  onClick={() => toggleCard(index)}
+                >
+                  {expanded ? "Show less" : "Show more"}
+                  <span aria-hidden="true">{expanded ? "−" : "+"}</span>
+                </button>
               </div>
-              <div className="col-xxl-6 col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="1.2s">
-                <figure className="image m-img" style={{ display: "block", padding: 0 }}>
-                  <img
-                    src={image}
-                    alt={sub_title}
-                    style={{ display: "block", width: "100%", height: "auto", aspectRatio: "4 / 3", objectFit: "cover" }}
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-      ))}
-    </>
+            </article>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

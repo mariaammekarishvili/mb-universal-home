@@ -15,34 +15,40 @@ interface DataType {
 const banner_data: DataType[] = [
   {
     id: 1,
-    thumb: "assets/imgs/banner/banner-3.jpg",
+    thumb: "assets/imgs/banner/main-1.jpg",
     sub_title: "PROVIDE THE BEST SERVICES",
     title: "DRYWALL & FINISHES",
     desc: (
       <>
-        Flawless Drywall, Taping & Interior Painting From clean sheetrock installation and seamless taping to Level 4/5 smooth finishes and precision painting for a flawless interior. 
+        Flawless Drywall, Taping & Interior Painting From clean sheetrock
+        installation and seamless taping to Level 4/5 smooth finishes and
+        precision painting for a flawless interior.
       </>
     ),
   },
   {
     id: 2,
-    thumb: "assets/imgs/resources/about-title-bg.jpg",
+    thumb: "assets/imgs/resources/banner-3.jpg",
     sub_title: "PROVIDE THE BEST SERVICES",
     title: " STRUCTURAL FRAMING ",
     desc: (
       <>
-        Precision Metal & Wood Framing Solutions Code-compliant metal stud framing and heavy-duty structural wood framing built for lasting strength, safety, and durability.
+        Precision Metal & Wood Framing Solutions Code-compliant metal stud
+        framing and heavy-duty structural wood framing built for lasting
+        strength, safety, and durability.
       </>
     ),
   },
   {
     id: 3,
-    thumb: "assets/imgs/banner/banner-2.jpg",
+    thumb: "assets/imgs/banner/main-3.jpg",
     sub_title: "PROVIDE THE BEST SERVICES",
     title: "INTERIOR SOLUTIONS",
     desc: (
       <>
-        Suspended Ceilings & Expert Tile Installation Precision grid drop ceilings and premium custom tile setting engineered for commercial durability and clean residential aesthetics.
+        Suspended Ceilings & Expert Tile Installation Precision grid drop
+        ceilings and premium custom tile setting engineered for commercial
+        durability and clean residential aesthetics.
       </>
     ),
   },

@@ -14,66 +14,77 @@ interface DataType {
 const about_data: DataType[] = [
   {
     title: "ABOUT MB UNIVERSAL HOME",
-    image: "/assets/imgs/resources/about-3.jpg",
-    sub_title:
-      "Building Excellence, Crafting Interiors, and Delivering Perfection Across NJ",
-    desc_1:
-      "Welcome to MB Universal Home LLC, your trusted partner for high-end drywall, framing, and complete interior renovation services. Based and operating across New York, New Jersey, Connecticut, and Pennsylvania, we combine years of hands-on industry experience with a strict commitment to superior craftsmanship. Whether it’s a residential home upgrade or a large-scale commercial project, our team brings precision, reliability, and attention to detail to every single square foot we touch.",
+    image: "/assets/imgs/about/about-3.jpg",
+    sub_title: "Quality Craftsmanship. Exceptional Interiors. Built to Last.",
+    desc_1: "Welcome to MB Universal Home Remodeling LLC, your trusted partner for drywall installation, drop ceilings, custom carpentry, tile installation, and professional painting. Serving residential and commercial clients throughout New Jersey, we focus on quality workmanship, attention to detail, and dependable service. Whether you're updating a single room or renovating an entire property, we work to bring your vision to life with care and precision.",
   },
   {
-    title: "Our Core Expertise",
+    title: "OUR CORE EXPERTISE",
     image: "/assets/imgs/resources/about-2.jpg",
-    sub_title: "Master Craftsmanship in Every Detail",
+    sub_title: "Quality Workmanship in Every Detail",
     desc_1: "",
     items: [
       {
         title: "Drywall Installation & Finishing",
-        desc: "Expert sheetrock hanging, meticulous metal and wood stud framing, and multi-coat joint compound finishing (taping and mudding) that yields perfectly smooth, paint-ready surfaces.",
+        desc: "Professional drywall installation, taping, mudding, and smooth finishing for clean, paint-ready walls and ceilings.",
       },
       {
-        title: "Drop Ceiling Solutions",
-        desc: "Professional suspended and acoustic ceiling installations designed for commercial offices, retail spaces, and modern residences, ensuring ideal acoustics and clean utility integration.",
+        title: "Drop Ceiling Installation",
+        desc: "Suspended and acoustic ceiling systems for residential and commercial spaces, installed with attention to detail and a clean, professional finish.",
       },
       {
-        title: "Wood & Metal Working",
-        desc: "Structural and decorative framing, custom carpentry, and architectural woodwork built strictly to code and tailored to your design specifications.",
+        title: "Custom Carpentry",
+        desc: "Custom cabinetry, trim work, and other carpentry solutions tailored to your space and design preferences.",
       },
       {
-        title: "Tile & Painting Services",
-        desc: "Precision tile setting for floors and walls, alongside high-end interior painting to give your space a flawless final look.",
+        title: "Tile Installation",
+        desc: "Tile installation for kitchen backsplashes, bathroom walls, walk-in showers, and floors, with a focus on precise placement and clean finishes.",
+      },
+      {
+        title: "Interior & Exterior Painting",
+        desc: "Professional painting services with thorough surface preparation and careful application for a clean, lasting finish.",
       },
     ],
   },
   {
-    title: "Why Homeowners & Businesses Choose Us",
-    image: "/assets/imgs/resources/about-1.jpg",
-    sub_title: "The MB Universal Home Advantage",
+    title: "WHY HOMEOWNERS & BUSINESSES CHOOSE US",
+    image: "/assets/imgs/resources/about-3-n.jpg",
+    sub_title: "What Makes Us Different",
     desc_1: "",
     items: [
       {
-        title: "Unmatched Experience & Skill",
-        desc: "Our skilled professionals bring decades of combined construction and renovation expertise, ensuring every project meets the highest industry standards.",
+        title: "Residential & Commercial Services",
+        desc: "We provide drywall, drop ceiling, carpentry, tile, and painting services for a variety of residential and commercial projects throughout New Jersey.",
       },
       {
-        title: "Strict Adherence to Deadlines",
-        desc: "We respect your time. From the initial measurement and scheduling to the final cleanup, we execute projects efficiently and on schedule.",
+        title: "Quality Workmanship",
+        desc: "We pay close attention to preparation, installation, and finishing details to deliver results that meet the needs of each project.",
       },
       {
-        title: "Transparent & Honest Communication",
-        desc: "No hidden fees or unexpected delays. We provide clear, straightforward estimates and keep you informed at every step of the process.",
+        title: "Clear Communication",
+        desc: "We discuss project requirements, provide detailed estimates, and keep you informed throughout the process.",
       },
       {
-        title: "Residential & Commercial Versatility",
-        desc: "Equipped to handle everything from custom single-room home remodeling to extensive multi-floor commercial builds.",
+        title: "A Customer-Focused Approach",
+        desc: "From the initial consultation to the final cleanup, we strive to make the renovation process straightforward, organized, and convenient for our clients.",
       },
     ],
   },
   {
-    title: "Our Mission & Vision",
+    title: "OUR MISSION & VISION",
     image: "/assets/imgs/resources/about-4.jpeg",
-    sub_title: "Our Mission & Core Values",
-    desc_1:
-      "Our mission is simple: to exceed client expectations by delivering structural integrity, flawless finishes, and exceptional customer service. We believe that a well-built interior is the foundation of a comfortable home and a productive workspace. By utilizing top-grade materials, advanced techniques, and rigorous safety protocols, we build spaces that stand the test of time.",
+    sub_title: "Building Better Spaces Through Quality Work",
+    desc_1: "",
+    items: [
+      {
+        title: "Our Mission",
+        desc: "Our mission is to provide dependable interior renovation services through quality workmanship, clear communication, and attention to detail. We strive to help homeowners and businesses throughout New Jersey improve their spaces with practical solutions tailored to their needs.",
+      },
+      {
+        title: "Our Vision",
+        desc: "Our vision is to build lasting relationships with our clients by consistently delivering professional service and quality results. We aim to be a trusted choice for drywall, drop ceilings, custom carpentry, tile installation, and painting throughout the communities we serve.",
+      },
+    ],
   },
 ];
 

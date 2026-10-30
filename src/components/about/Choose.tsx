@@ -14,25 +14,25 @@ interface DataType {
 
 const choose_data: DataType = {
   sub_title: "why choose us",
-  title: "What's Make Us Different",
+  title: "What Makes Us Different",
   feature_list: [
     {
       id: 1,
       icon: "icon-team-1",
-      title: "Commercial & Residential Excellence",
-      desc: "We deliver top-tier drywall, framing, and interior renovation solutions tailored precisely to the high standards of both residential homes and commercial properties.",
+      title: "Quality Workmanship",
+      desc: "We provide professional drywall, drop ceiling, carpentry, tile installation, and painting services for residential and commercial properties throughout New Jersey. Every project is approached with care, precision, and attention to detail.",
     },
     {
       id: 2,
       icon: "icon-target",
-      title: "Client-Focused Mission",
-      desc: "Our mission is to provide transparent communication, strict adherence to deadlines, and flawless craftsmanship from the initial consultation to the final cleanup",
+      title: "Clear Communication & Dependable Service",
+      desc: "We believe every successful project starts with clear communication and realistic expectations. From the initial consultation to the final cleanup, we keep our clients informed and work hard to meet agreed-upon deadlines.",
     },
     {
       id: 3,
       icon: "icon-help",
-      title: "Safety And Reliability",
-      desc: "We utilize premium-grade materials, professional safety protocols, and expert installation techniques to ensure sturdy, dependable, and long-lasting results.",
+      title: "Quality Materials & Professional Standards",
+      desc: "We focus on quality materials, proper installation techniques, and safe work practices to deliver durable, dependable results that stand the test of time.",
     },
   ],
 };
@@ -87,7 +87,7 @@ const Choose = () => {
             <figure className="image m-img">
               <img
                 src="/assets/imgs/resources/choose-1.jpg"
-                width="423"
+                width="600"
                 alt=""
               />
             </figure>

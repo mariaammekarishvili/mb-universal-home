@@ -1,0 +1,50 @@
+.project-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border: 1px solid #102039;
+  border-radius: 999px;
+  background: #102039;
+  color: #fff;
+  box-shadow: 0 4px 12px rgb(16 32 57 / 15%);
+  transition: background 180ms ease, box-shadow 180ms ease;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.project-back-link svg {
+  transition: transform 180ms ease;
+}
+
+.project-back-link:hover {
+  color: #102039;
+  background: #fff;
+  box-shadow: 0 6px 18px rgb(16 32 57 / 20%);
+}
+
+.project-back-link:hover svg {
+  transform: translateX(-4px);
+}
+
+.project-back-link:focus-visible {
+  outline: 2px solid #102039;
+  outline-offset: 5px;
+}
+
+.project-gallery-title {
+  color: #102039;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-back-link,
+  .project-back-link svg {
+    transition: none;
+  }
+}

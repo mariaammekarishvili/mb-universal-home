@@ -1,0 +1,22 @@
+.contact-page-section {
+  --theme-color: #102039;
+  color: #102039;
+}
+
+.contact-page-section .contact-box .icon-1,
+.contact-page-section .contact-box .info span,
+.contact-page-section .contact-box .info h4,
+.contact-page-section .contact-box .info a,
+.contact-page-section .section-sub-title,
+.contact-page-section .section-title,
+.contact-page-section .contact-page-form label,
+.contact-page-section .contact-page-form input,
+.contact-page-section .contact-page-form textarea {
+  color: #102039;
+}
+
+.contact-page-section .contact-page-form input::placeholder,
+.contact-page-section .contact-page-form textarea::placeholder {
+  color: #102039;
+  opacity: 1;
+}

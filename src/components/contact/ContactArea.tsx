@@ -1,6 +1,7 @@
 import { businessContact } from "../../data/BusinessContact";
 import { Link } from "react-router-dom";
 import ContactForm from "../forms/ContactForm";
+import "./ContactArea.css";
 
 interface DataType {
   id: number;
@@ -31,6 +32,13 @@ const contact_data: DataType[] = [
     title: "Make A quote",
     info: businessContact.email,
     link: businessContact.emailHref,
+  },
+  {
+    id: 4,
+    icon: "fal fa-map-marker-alt",
+    title: "Visit Our Office",
+    info: '109 MILLTOWN RD EAST BRUNSWICK NJ 08816',
+    link: 'https://maps.app.goo.gl/jyjnpdk5okasUsF4A',
   },
 ];
 

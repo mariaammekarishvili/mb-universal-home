@@ -7926,3 +7926,6 @@ Animate wobble-vertical
 p.form_error {
   color: red;
 }
+.project-page-section{
+  margin-top: -30px;
+}

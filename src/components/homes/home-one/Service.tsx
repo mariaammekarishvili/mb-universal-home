@@ -14,9 +14,10 @@ interface DataType {
 const service_data: DataType[] = [
   {
     id: 1,
-    icon: "icon-roof-2",
-    thumb: "/assets/imgs/resources/service-tab-1.jpg",
+    icon: "icon-engineer",
+    thumb: "/assets/imgs/resources/service-1.jpg",
     title: "Drop Ceilings Services",
+    tabTitle: "Suspended and acoustic ceiling installation for commercial and residential properties. ",
     desc: "Transform your interior spaces with custom drop ceiling solutions engineered for optimal acoustic control, sleek aesthetics, and easy utility access. We deliver precision grid layouts and long-lasting panel systems for commercial and residential properties across New Jersey.",
     list: [
       "Acoustic & Noise Control",
@@ -27,8 +28,9 @@ const service_data: DataType[] = [
   {
     id: 2,
     icon: "icon-home-1",
-    thumb: "/assets/imgs/resources/service-tab-1.jpg",
+    thumb: "/assets/imgs/resources/service-2.jpg",
     title: "Professional Painting Services",
+    tabTitle:"Clean interior and exterior painting with thorough prep work and lasting finishes.",
     desc: "Expert interior and exterior painting, priming, and surface preparation. We give your newly renovated spaces a polished, vibrant, and long-lasting finish.",
     list: [
       "High-End Interior Painting",
@@ -38,10 +40,10 @@ const service_data: DataType[] = [
   },
   {
     id: 3,
-    icon: "icon-roof-2",
-    tabTitle: "Drywall Installation",
-    thumb: "/assets/imgs/resources/service-tab-1.jpg",
-    title: "Drywall Installation & Framing",
+    icon: "icon-home",
+    tabTitle: "Precision drywall hanging, seamless taping, and Level 5 smooth finishes. ",
+    thumb: "/assets/imgs/resources/service-3.jpg",
+    title: "Drywall Installation",
     desc: "Expert sheetrock hanging, metal and wood framing, and multi-coat joint compound finishing. We build sturdy walls and ceilings with smooth, paint-ready surfaces.",
     list: [
       "Precise Wall & Ceiling Hanging",
@@ -52,22 +54,22 @@ const service_data: DataType[] = [
   {
     id: 4,
     icon: "icon-hammer",
-    tabTitle: "Wood & Metal Working",
-    thumb: "/assets/imgs/resources/service-tab-1.jpg",
-    title: "Custom Wood & Metal Working",
-    desc: "Professional metal stud framing, structural wood framing, architectural woodwork, and custom carpentry built strictly to code for residential and commercial projects.",
+    tabTitle: "Custom cabinetry, premium countertops, and high-end finish trim work. ",
+    thumb: "/assets/imgs/resources/service-4.jpg",
+    title: "Custom Carpentry",
+    desc: "We provide custom carpentry solutions designed to enhance the beauty, functionality, and value of your space. From custom cabinets and countertops to detailed finish trim, our work combines quality materials, precise installation, and attention to every detail.",
     list: [
-      "Metal & Wood Stud Framing",
-      "Custom Carpentry & Woodwork",
-      "Precision Structural Layout",
+      "Custom Cabinetry",
+      "Countertop Installation",
+      "Finish Trim & Details",
     ],
   },
   {
     id: 5,
-    icon: "icon-roof-4",
-    tabTitle: "Tile Work Services",
-    thumb: "/assets/imgs/resources/service-tab-1.jpg",
-    title: "Professional Tile Work",
+    icon: "icon-help",
+    tabTitle: "Flawless tile setting for kitchens, bathrooms, walk-in showers, and floors.",
+    thumb: "/assets/imgs/resources/service-5.jpg",
+    title: "Tile Installation",
     desc: "Exceptional tile installation for floors, walls, kitchens, and bathrooms. We deliver durable, beautiful, and precise tile layouts tailored to your interior design.",
     list: [
       "Kitchen & Bathroom Tiling",
@@ -134,10 +136,10 @@ const Service = ({ style }: PropType) => {
                       id="modified-roofing-tab"
                       style={{ cursor: "pointer" }}
                     >
-                      {/* <div className="icon-box">
+                      <div className="icon-box">
                         <i className={tab.icon}></i>
-                      </div> */}
-                      {tab.tabTitle ?? tab.title}
+                      </div>
+                      {tab.title}
                     </a>
                   </li>
                 ))}
@@ -164,10 +166,16 @@ const Service = ({ style }: PropType) => {
                         ></div>
                       )}
                       <figure className="image p-relative">
-                        <img src={item.thumb} alt="" />
+                        <img
+                          height="100%"
+                          style={{ height: "100%" }}
+                          className="h-full"
+                          src={item.thumb}
+                          alt=""
+                        />
                       </figure>
                       <div className="content p-relative">
-                        <h4>{item.title}</h4>
+                        <h4 style={{ lineHeight: "30px" }}>{item.tabTitle}</h4>
                         <p className="pt-15 pb-10">{item.desc}</p>
                         <ul className="tab-list-content">
                           {item.list.map((list, i) => (
