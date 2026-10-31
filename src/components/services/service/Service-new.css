@@ -6,13 +6,16 @@
 .service-cards-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: start;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
   gap: 24px;
   max-width: 1800px;
   margin: 0 auto;
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid #e2e2e2;
   border-radius: 12px;
@@ -21,6 +24,7 @@
 }
 
 .service-card-image {
+  flex-shrink: 0;
   display: block;
   width: 100%;
   height: auto;
@@ -30,6 +34,9 @@
 }
 
 .service-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 24px;
 }
 
@@ -54,6 +61,7 @@
   justify-content: space-between;
   gap: 16px;
   width: 100%;
+  margin-top: auto;
   padding: 14px 0 0;
   border: 0;
   border-top: 1px solid #e2e2e2;

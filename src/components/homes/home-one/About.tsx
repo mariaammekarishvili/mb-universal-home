@@ -28,7 +28,7 @@ const about_data: DataType = {
     {
       id: 2,
       list: [
-        "250+ Completed Projects",
+        "200+ Completed Projects",
         "Expert Framing & Finishing",
         "Clean & Reliable Work",
       ],
