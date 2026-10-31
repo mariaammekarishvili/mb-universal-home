@@ -1,9 +1,7 @@
-import { toast } from 'react-toastify';
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
-import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { businessContact } from "../../data/BusinessContact";
 
 interface FormData {
    user_name: string;
@@ -30,29 +28,25 @@ const schema = yup
 
 const ContactForm = () => {
 
-   const { register, handleSubmit, reset, formState: { errors, isSubmitting }, } = useForm<FormData>({ resolver: yupResolver(schema), });
+   const { register, handleSubmit, formState: { errors, isSubmitting }, } = useForm<FormData>({ resolver: yupResolver(schema), });
 
-   const form = useRef<HTMLFormElement>(null);
+   const sendWhatsApp = (data: FormData) => {
+      const message = [
+         'New website inquiry',
+         '',
+         `Name: ${data.user_name}`,
+         `Email: ${data.user_email}`,
+         `Phone: ${data.user_phone}`,
+         `Subject: ${data.subject}`,
+         '',
+         data.message,
+      ].join('\n');
 
-   const sendEmail = async () => {
-      if (!form.current) {
-         toast.error('Contact form is unavailable. Please email mbuniversalhome@gmail.com.');
-         return;
-      }
-
-      try {
-         await emailjs.sendForm('service_6y6yqwk', 'template_l7vv1mg',
-            form.current, '0Nl20_gGiZ8xlkEt9');
-         toast.success('Message submitted successfully');
-         reset();
-      } catch (error) {
-         console.error('Contact form submission failed:', error);
-         toast.error('Message could not be sent. Please email mbuniversalhome@gmail.com.');
-      }
+      window.location.assign(`${businessContact.whatsapp}?text=${encodeURIComponent(message)}`);
    };
 
    return (
-      <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+      <form onSubmit={handleSubmit(sendWhatsApp)}>
          <div className="row">
             <div className="col-lg-6">
                <label>Your Name*</label>
@@ -80,8 +74,9 @@ const ContactForm = () => {
                <p className="form_error">{errors.message?.message}</p>
             </div>
             <div className="col-lg-12">
+               <p>Your details will open in WhatsApp. Press Send there to submit your inquiry.</p>
                <button type="submit" className="primary-btn-1 btn-hover" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Now"} &nbsp; | <i className="icon-right-arrow"></i>
+                  {isSubmitting ? "Opening WhatsApp..." : "Send via WhatsApp"} &nbsp; | <i className="icon-right-arrow"></i>
                   <span style={{ top: "147.172px", left: "108.5px" }}></span>
                </button>
             </div>
