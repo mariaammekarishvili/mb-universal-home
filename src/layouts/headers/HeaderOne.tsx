@@ -3,14 +3,12 @@ import NavMenu from "./Menu/NavMenu";
 import HeaderTwoTop from "./Menu/HeaderTwoTop";
 import { useState } from "react";
 import Offcanvas from "./Menu/Offcanvas";
-import HeaderSearch from "./Menu/HeaderSearch";
 import UseSticky from "../../hooks/UseSticky";
 import { Link } from "react-router-dom";
 
 const HeaderOne = () => {
   const { sticky } = UseSticky();
   const [offCanvas, setOffCanvas] = useState<boolean>(false);
-  const [isSearch, setIsSearch] = useState<boolean>(false);
 
   return (
     <>
@@ -82,11 +80,9 @@ const HeaderOne = () => {
         </div>
       </header>
       <Offcanvas
-        style={false}
         offCanvas={offCanvas}
         setOffCanvas={setOffCanvas}
       />
-      <HeaderSearch isSearch={isSearch} setIsSearch={setIsSearch} />
     </>
   );
 };
