@@ -51,7 +51,7 @@ export const structuredData = {
             opens: "07:00",
             closes: "18:00",
          },
-         areaServed: ["New Jersey", "New York", "Connecticut", "Pennsylvania"].map((name) => ({ "@type": "State", name })),
+         areaServed: { "@type": "State", name: "New Jersey" },
          sameAs: businessSocials.filter((social) => social.name !== "WhatsApp").map((social) => social.href),
          hasOfferCatalog: {
             "@type": "OfferCatalog",
@@ -70,7 +70,7 @@ export interface PageSeo {
 export const pageSeo: Record<string, PageSeo> = {
    "/": {
       title: "MB Universal Home | Drywall, Framing & Interior Contractor in NJ",
-      description: "MB Universal Home LLC in East Brunswick, NJ: Level 5 drywall, wood and metal framing, drop ceilings, tile, and interior painting for homes and businesses across NJ, NY, CT, and PA. Call +1 732-790-7530.",
+      description: "MB Universal Home LLC in East Brunswick, NJ: Level 5 drywall, wood and metal framing, drop ceilings, tile, and interior painting for homes and businesses across New Jersey. Call +1 732-790-7530.",
    },
    "/about": {
       title: "About Us | MB Universal Home, NJ Drywall & Renovation Contractor",
@@ -82,7 +82,7 @@ export const pageSeo: Record<string, PageSeo> = {
    },
    "/projects": {
       title: "Our Projects | Drywall & Interior Renovation Work | MB Universal Home",
-      description: "See drywall, framing, ceiling, tile, and painting projects completed by MB Universal Home for homes and commercial spaces in New Jersey and nearby states.",
+      description: "See drywall, framing, ceiling, tile, and painting projects completed by MB Universal Home for homes and commercial spaces across New Jersey.",
    },
    "/contact": {
       title: "Contact Us for a Free Quote | MB Universal Home, East Brunswick NJ",
@@ -90,6 +90,6 @@ export const pageSeo: Record<string, PageSeo> = {
    },
    ...Object.fromEntries(project_data.map(({ page, title }) => [`/projects/${page}`, {
       title: `${title} Project Photos | ${siteName}`,
-      description: `See photos of our ${title} work by MB Universal Home, a drywall, framing, and interior renovation contractor serving New Jersey, New York, Connecticut, and Pennsylvania.`,
+      description: `See photos of our ${title} work by MB Universal Home, a drywall, framing, and interior renovation contractor serving New Jersey.`,
    }])),
 }
