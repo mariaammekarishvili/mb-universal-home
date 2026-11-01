@@ -30,6 +30,12 @@ const sharedHead = [
   `<meta property="og:type" content="website" />`,
   `<meta property="og:site_name" content="${siteName}" />`,
   `<meta property="og:image" content="${shareImage}" />`,
+  // With the size given, Facebook and Messenger show the image on a link's first share.
+  `<meta property="og:image:type" content="image/jpeg" />`,
+  `<meta property="og:image:width" content="1200" />`,
+  `<meta property="og:image:height" content="630" />`,
+  `<meta property="og:image:alt" content="${siteName}: drywall installation in New Jersey" />`,
+  `<meta property="og:locale" content="en_US" />`,
   `<meta name="twitter:card" content="summary_large_image" />`,
   `<script type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, '\\u003c')}</script>`,
 ].join('\n    ')
