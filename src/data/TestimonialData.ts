@@ -13,7 +13,7 @@ const testi_data: DataType[] = [
     page: "home_1",
     avatar: "/assets/imgs/resources/testimonials-2.png",
     name: "David Adams",
-    designation: "Homeowner, NY",
+    designation: "Homeowner, NJ",
     desc: "“ Great to work with. Sent picture and room dimensions. Gave quick quote and scheduled the job for two days later. Guys showed up on time, worked quickly and delivered flawless results!”",
   },
   {
@@ -21,7 +21,7 @@ const testi_data: DataType[] = [
     page: "home_1",
     avatar: "/assets/imgs/resources/testimonials-1.png",
     name: "Zura Zumbadze ",
-    designation: "Commercial Client, PA",
+    designation: "Commercial Client, NJ",
     desc: "“ I highly recommend this company. They deliver their framing and drywall work on time and to the highest standard. Outstanding service from start to finish! ”",
   },
   {

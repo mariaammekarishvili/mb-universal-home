@@ -71,7 +71,7 @@ const Testimonial = () => {
                 With over 15 years of combined experience, MB Universal Home
                 provides expert drywall installation, metal framing, smooth
                 taping, and complete interior finishes. We serve residential and
-                commercial clients across NY, NJ and PA with unmatched precision
+                commercial clients across  NJ with unmatched precision
                 and reliability.
               </p>
               <div className="testimonials-box">

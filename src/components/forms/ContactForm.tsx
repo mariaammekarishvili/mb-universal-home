@@ -30,10 +30,9 @@ const ContactForm = () => {
 
    const { register, handleSubmit, formState: { errors, isSubmitting }, } = useForm<FormData>({ resolver: yupResolver(schema), });
 
-   const sendWhatsApp = (data: FormData) => {
-      const message = [
-         'New website inquiry',
-         '',
+   const sendEmail = (data: FormData) => {
+      const subject = `Website inquiry: ${data.subject}`;
+      const body = [
          `Name: ${data.user_name}`,
          `Email: ${data.user_email}`,
          `Phone: ${data.user_phone}`,
@@ -42,11 +41,11 @@ const ContactForm = () => {
          data.message,
       ].join('\n');
 
-      window.location.assign(`${businessContact.whatsapp}?text=${encodeURIComponent(message)}`);
+      window.location.assign(`${businessContact.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
    };
 
    return (
-      <form onSubmit={handleSubmit(sendWhatsApp)}>
+      <form onSubmit={handleSubmit(sendEmail)}>
          <div className="row">
             <div className="col-lg-6">
                <label>Your Name*</label>
@@ -74,9 +73,9 @@ const ContactForm = () => {
                <p className="form_error">{errors.message?.message}</p>
             </div>
             <div className="col-lg-12">
-               <p>Your details will open in WhatsApp. Press Send there to submit your inquiry.</p>
+               <p>Your details will open in your email app. Press Send there to submit your inquiry.</p>
                <button type="submit" className="primary-btn-1 btn-hover" disabled={isSubmitting}>
-                  {isSubmitting ? "Opening WhatsApp..." : "Send via WhatsApp"} &nbsp; | <i className="icon-right-arrow"></i>
+                  {isSubmitting ? "Opening email..." : "Send via Email"} &nbsp; | <i className="icon-right-arrow"></i>
                   <span style={{ top: "147.172px", left: "108.5px" }}></span>
                </button>
             </div>

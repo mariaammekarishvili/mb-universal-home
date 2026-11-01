@@ -2,14 +2,13 @@ import type { FormEvent } from "react";
 import { businessContact } from "../../data/BusinessContact";
 
 const TestimonialForm = () => {
-   const sendWhatsApp = (event: FormEvent<HTMLFormElement>) => {
+   const sendEmail = (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       const form = event.currentTarget;
       const data = new FormData(form);
       const location = form.querySelector<HTMLSelectElement>('[name="location"]');
-      const message = [
-         'New website request',
-         '',
+      const subject = 'New website request';
+      const body = [
          `Name: ${data.get('user_name')}`,
          `Email: ${data.get('user_email')}`,
          `Phone: ${data.get('user_phone')}`,
@@ -17,11 +16,11 @@ const TestimonialForm = () => {
          `Date: ${data.get('date')}`,
       ].join('\n');
 
-      window.location.assign(`${businessContact.whatsapp}?text=${encodeURIComponent(message)}`);
+      window.location.assign(`${businessContact.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
    };
 
    return (
-      <form onSubmit={sendWhatsApp}>
+      <form onSubmit={sendEmail}>
          <div className="row">
             <div className="col-lg-12">
                <div className="contact__from-input mb-20">
@@ -60,9 +59,9 @@ const TestimonialForm = () => {
             </div>
             <div className="col-12">
                <div className="testimonials_btn text-center">
-                  <p>Your details will open in WhatsApp. Press Send there to submit your request.</p>
+                  <p>Your details will open in your email app. Press Send there to submit your request.</p>
                   <button type="submit" className="primary-btn-4 btn-hover">
-                     Send via WhatsApp
+                     Send via Email
                      <span style={{ top: "147.172px", left: "108.5px" }}></span>
                   </button>
                </div>

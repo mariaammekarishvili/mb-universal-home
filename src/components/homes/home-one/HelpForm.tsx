@@ -2,17 +2,16 @@ import type { FormEvent } from "react";
 import { businessContact } from "../../../data/BusinessContact";
 
 const HelpForm = () => {
-  const sendWhatsApp = (event: FormEvent<HTMLFormElement>) => {
+  const sendEmail = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const message = [
-      "New project request",
-      "",
+    const subject = "New project request";
+    const body = [
       `Name: ${data.get("user_name")}`,
       `Phone: ${data.get("user_phone")}`,
     ].join("\n");
 
-    window.location.assign(`${businessContact.whatsapp}?text=${encodeURIComponent(message)}`);
+    window.location.assign(`${businessContact.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
   };
 
   return (
@@ -45,7 +44,7 @@ const HelpForm = () => {
                 Ready to start next project together? Let's get in touch!
               </h3>
               <div className="inner p-relative">
-                <form onSubmit={sendWhatsApp}>
+                <form onSubmit={sendEmail}>
                   <div className="row">
                     <div className="col-lg-4 col-md-12 mb-20">
                       <input type="text" name="user_name" placeholder="Your Name" required />
@@ -55,14 +54,14 @@ const HelpForm = () => {
                     </div>
                     <div className="col-lg-4 col-md-12">
                       <button type="submit" className="primary-btn-1 btn-hover">
-                        Send via WhatsApp
+                        Send via Email
                         <span
                           style={{ top: "147.172px", left: "108.5px" }}
                         ></span>
                       </button>
                     </div>
                   </div>
-                  <p className="text-white mt-20">Your details will open in WhatsApp. Press Send there to submit your request.</p>
+                  <p className="text-white mt-20">Your details will open in your email app. Press Send there to submit your request.</p>
                 </form>
               </div>
             </div>
