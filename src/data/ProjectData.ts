@@ -59,7 +59,7 @@ const project_data: DataType[] = [
       "/assets/imgs/project/project-four/7-gigapixel-scale-2_00x.jpg",
     ],
     thumb: "/assets/imgs/project/project-n-2.jpg",
-    sub_title: "Leaving Room Renovation",
+    sub_title: "Living Room Renovation",
     title: "Commercial Drop Ceilings",
   },
   {

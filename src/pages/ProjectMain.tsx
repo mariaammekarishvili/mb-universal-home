@@ -5,7 +5,7 @@ import Project from '../components/pages/projects/project';
 const ProjectMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'Project'} />
+         <SEO />
          <Project />
       </Wrapper>
    );

@@ -5,7 +5,7 @@ import NotFound from '../components/pages/error';
 const ErrorMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'404 ||'} />
+         <SEO />
          <NotFound />
       </Wrapper>
    );

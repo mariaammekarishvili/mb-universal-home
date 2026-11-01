@@ -5,7 +5,7 @@ import Service from '../components/services/service';
 const ServiceMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'Service'} />
+         <SEO />
          <Service />
       </Wrapper>
    );

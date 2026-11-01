@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 const HomeMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'Home'} />
+         <SEO />
          <HomeOne />
       </Wrapper>
    );

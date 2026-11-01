@@ -21,6 +21,10 @@ npm run build
 
 Business phone, email, and social links are maintained in `src/data/BusinessContact.ts`.
 
+## SEO
+
+Page titles, descriptions, the site address, and the business details Google shows (address, hours, services) are maintained in `src/data/SeoData.ts`. The build writes a separate HTML file for each page there (`dist/about/index.html`, …) plus `sitemap.xml` and `robots.txt`. A new page or route needs an entry in `pageSeo`, or the server answers it with 404 and search engines skip it.
+
 ## Deploy to GoDaddy Node.js Hosting
 
 ```bash

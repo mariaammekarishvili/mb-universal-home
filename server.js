@@ -44,12 +44,12 @@ const COMPRESSIBLE = new Set(['.html', '.js', '.mjs', '.css', '.json', '.map', '
 const HASHED = /-[A-Za-z0-9_-]{8}\.[a-z0-9]+$/;
 
 function cacheControl(filePath) {
-  if (filePath === INDEX) return 'no-cache';
+  if (filePath.endsWith('.html')) return 'no-cache';
   if (HASHED.test(filePath)) return 'public, max-age=31536000, immutable';
   return 'public, max-age=3600';
 }
 
-function sendFile(req, res, filePath, stat) {
+function sendFile(req, res, filePath, stat, status = 200) {
   const ext = path.extname(filePath).toLowerCase();
   const headers = {
     'Content-Type': TYPES[ext] || 'application/octet-stream',
@@ -66,7 +66,7 @@ function sendFile(req, res, filePath, stat) {
     headers['Content-Length'] = stat.size;
   }
 
-  res.writeHead(200, headers);
+  res.writeHead(status, headers);
   if (req.method === 'HEAD') return res.end();
 
   const stream = fs.createReadStream(filePath);
@@ -110,9 +110,18 @@ const server = http.createServer((req, res) => {
     // Answering it with index.html would make the browser reject the script and show a blank page.
     if (path.extname(pathname)) return sendText(res, 404, 'Not Found');
 
-    fs.stat(INDEX, (indexErr, indexStat) => {
-      if (indexErr) return sendText(res, 500, 'dist/index.html is missing. Run `npm run build` before `npm start`.');
-      sendFile(req, res, INDEX, indexStat);
+    // The build writes every page, such as /about, to dist/about/index.html with that
+    // page's title and description (see src/data/SeoData.ts). Any other path is not a
+    // page: answer 404 so search engines drop it, with index.html so React Router
+    // still shows the site's 404 page.
+    const pagePath = path.join(filePath, 'index.html');
+    fs.stat(pagePath, (pageErr, pageStat) => {
+      if (!pageErr && pageStat.isFile()) return sendFile(req, res, pagePath, pageStat);
+
+      fs.stat(INDEX, (indexErr, indexStat) => {
+        if (indexErr) return sendText(res, 500, 'dist/index.html is missing. Run `npm run build` before `npm start`.');
+        sendFile(req, res, INDEX, indexStat, 404);
+      });
     });
   });
 });
