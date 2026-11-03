@@ -41,31 +41,17 @@ const service_data: DataType[] = [
     ],
   },
   {
-    id: 3,
-    icon: "icon-engineer",
-    thumb: "/assets/imgs/resources/service-1.jpg",
-    title: "Commercial Drop Ceilings",
-    tabTitle:
-      "Suspended and acoustic ceiling installation for commercial and residential properties. ",
-    desc: "Transform your interior spaces with custom drop ceiling solutions engineered for optimal acoustic control, sleek aesthetics, and easy utility access. We deliver precision grid layouts and long-lasting panel systems for commercial and residential properties across New Jersey.",
-    list: [
-      "Acoustic & Noise Control",
-      "Precision Grid & Panel Installation",
-      "Seamless Utility & Lighting Integration",
-    ],
-  },
-  {
     id: 4,
-    icon: "icon-help",
+    icon: "icon-engineer",
     tabTitle:
       "Flawless tile setting for kitchens, bathrooms, walk-in showers, and floors.",
     thumb: "/assets/imgs/resources/service-5.jpg",
     title: "Kitchen & Bathroom Tile Work",
-    desc: "Exceptional tile installation for floors, walls, kitchens, and bathrooms. We deliver durable, beautiful, and precise tile layouts tailored to your interior design.",
+    desc: "Precision drywall hanging, seamless taping, and Level 5 smooth finishes. Expert sheetrock hanging, metal and wood framing integration, and multi-coat joint compound finishing. We build sturdy interior walls with smooth, paint-ready surfaces.",
     list: [
-      "Kitchen & Bathroom Tiling",
-      "Floor & Wall Tile Setting",
-      "Clean & Detailed Finish",
+      "Precise Sheetrock & Wall Installation",
+      "Seamless Taping & Mudding",
+      "Professional & Clean Crew",
     ],
   },
   {

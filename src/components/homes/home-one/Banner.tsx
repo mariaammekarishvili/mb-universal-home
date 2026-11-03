@@ -43,12 +43,10 @@ const banner_data: DataType[] = [
     id: 3,
     thumb: "assets/imgs/banner/main-3.jpg",
     sub_title: "PROVIDE THE BEST SERVICES",
-    title: "INTERIOR SOLUTIONS",
+    title: "TILE & PAINTING SERVICES",
     desc: (
       <>
-        Suspended Ceilings & Expert Tile Installation Precision grid drop
-        ceilings and premium custom tile setting engineered for commercial
-        durability and clean residential aesthetics.
+        Precision tile setting for kitchens and bathrooms paired with clean interior painting engineered for commercial durability and residential aesthetics.
       </>
     ),
   },

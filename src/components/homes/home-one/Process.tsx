@@ -15,7 +15,7 @@ const process_data: Datatype[] = [
       id: 2,
       icon: "icon-engineer",
       title: "Professional Work & Installation",
-      desc: "From drop ceilings and drywall installation to custom carpentry, tile installation, and painting, our team focuses on quality workmanship, careful preparation, and attention to detail throughout every stage of the project."   },
+      desc: "From drywall installation and structural framing to custom carpentry, tile installation, and painting, our team focuses on quality workmanship, careful preparation, and attention to detail throughout every stage of the project."   },
    {
       id: 3,
       icon: "icon-home",

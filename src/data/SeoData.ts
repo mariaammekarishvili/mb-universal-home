@@ -12,7 +12,6 @@ export const shareImage = `${siteUrl}/assets/imgs/og-image.jpg`
 const services = [
    "Custom Wood & Metal Framing",
    "Level 5 Drywall & Finishing",
-   "Commercial Drop Ceilings",
    "Kitchen & Bathroom Tile Work",
    "Interior Painting & Trim",
 ]

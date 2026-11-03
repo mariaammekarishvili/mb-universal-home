@@ -19,14 +19,6 @@ const services = [
       "Achieve flawless interior walls with our expert sheetrock hanging, seamless taping, and Level 5 smooth finishes. We deliver code-compliant drywall solutions and meticulous surface preparation for residential and commercial properties across New Jersey.",
   },
   {
-    image: "/assets/imgs/service/service-n-1.jpg",
-    title: "Commercial Drop Ceilings",
-    description:
-      "Suspended ceiling installation for commercial and residential properties.",
-    details:
-      "Transform your interior space with custom drop ceiling solutions engineered for acoustic control and clean design. We specialize in suspended grid systems, acoustic panel installation, and seamless utility integration for commercial and residential properties across New Jersey.",
-  },
-  {
     image: "/assets/imgs/service/service-n-4.jpg",
     title: "Kitchen & Bathroom Tile Work",
     description:

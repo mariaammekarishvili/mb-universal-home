@@ -16,7 +16,8 @@ const about_data: DataType[] = [
     title: "ABOUT MB UNIVERSAL HOME",
     image: "/assets/imgs/about/about-n-3.jpg",
     sub_title: "Quality Craftsmanship. Exceptional Interiors. Built to Last.",
-    desc_1: "Welcome to MB Universal Home Remodeling LLC, your trusted partner for drywall installation, drop ceilings, custom carpentry, tile installation, and professional painting. Serving residential and commercial clients throughout New Jersey, we focus on quality workmanship, attention to detail, and dependable service. Whether you're updating a single room or renovating an entire property, we work to bring your vision to life with care and precision.",
+    desc_1:
+      "Welcome to MB Universal Home Remodeling LLC, your trusted partner for drywall installation, structural framing, custom carpentry, tile installation, and professional painting. Serving residential and commercial clients throughout New Jersey, we focus on quality workmanship, attention to detail, and dependable service. Whether you're updating a single room or renovating an entire property, we work to bring your vision to life with care and precision.",
   },
   {
     title: "OUR CORE EXPERTISE",
@@ -27,10 +28,6 @@ const about_data: DataType[] = [
       {
         title: "Drywall Installation & Finishing",
         desc: "Professional drywall installation, taping, mudding, and smooth finishing for clean, paint-ready walls and ceilings.",
-      },
-      {
-        title: "Drop Ceiling Installation",
-        desc: "Suspended and acoustic ceiling systems for residential and commercial spaces, installed with attention to detail and a clean, professional finish.",
       },
       {
         title: "Custom Carpentry",
@@ -54,7 +51,7 @@ const about_data: DataType[] = [
     items: [
       {
         title: "Residential & Commercial Services",
-        desc: "We provide drywall, drop ceiling, carpentry, tile, and painting services for a variety of residential and commercial projects throughout New Jersey.",
+        desc: "We provide drywall, framing, carpentry, tile, and painting services for a variety of residential and commercial projects throughout New Jersey.",
       },
       {
         title: "Quality Workmanship",
@@ -82,7 +79,7 @@ const about_data: DataType[] = [
       },
       {
         title: "Our Vision",
-        desc: "Our vision is to build lasting relationships with our clients by consistently delivering professional service and quality results. We aim to be a trusted choice for drywall, drop ceilings, custom carpentry, tile installation, and painting throughout the communities we serve.",
+        desc: "Our vision is to build lasting relationships with our clients by consistently delivering professional service and quality results. We aim to be a trusted choice for drywall, framing, custom carpentry, tile installation, and painting throughout the communities we serve."
       },
     ],
   },

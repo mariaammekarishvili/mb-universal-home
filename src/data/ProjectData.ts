@@ -60,7 +60,7 @@ const project_data: DataType[] = [
     ],
     thumb: "/assets/imgs/project/project-n-2.jpg",
     sub_title: "Living Room Renovation",
-    title: "Commercial Drop Ceilings",
+    title: "Interior Finishes",
   },
   {
     id: 1,

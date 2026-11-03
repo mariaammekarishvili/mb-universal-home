@@ -20,7 +20,7 @@ const choose_data: DataType = {
       id: 1,
       icon: "icon-team-1",
       title: "Quality Workmanship",
-      desc: "We provide professional drywall, drop ceiling, carpentry, tile installation, and painting services for residential and commercial properties throughout New Jersey. Every project is approached with care, precision, and attention to detail.",
+      desc: "We provide professional drywall, framing, carpentry, tile installation, and painting services for residential and commercial properties throughout New Jersey. Every project is approached with care, precision, and attention to detail.",
     },
     {
       id: 2,

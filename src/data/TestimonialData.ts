@@ -30,7 +30,7 @@ const testi_data: DataType[] = [
     avatar: "/assets/imgs/resources/testimonials-2.png",
     name: "Marie Gautier",
     designation: "Homeowner, NJ",
-    desc: "“ (MB Universal) just replaced our drop down ceiling and finished the drywall. The work was done exceptionally well and completed efficiently with zero mess. ”",
+    desc: "“ MB Universal Home recently completed our drywall installation and interior painting. The team was professional, worked with great precision, and left the workspace spotless. Highly recommend their services!”",
   },
 ];
 
