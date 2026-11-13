@@ -5328,7 +5328,7 @@ width: 100%;
   background-size: contain;
 }
 
-@media only screen and (max-width: 1770px){
+@media only screen and (max-width: 1199px){
 
   .help-form-section .image-area {
     display: none;

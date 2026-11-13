@@ -30,8 +30,8 @@ const HelpForm = () => {
               <img
                 src="/assets/imgs/resources/help-form.jpeg"
                 alt=""
-                width={1600}
-                height={900}
+                width={1151}
+                height={757}
               />
             </div>
           </div>
