@@ -25,17 +25,17 @@ const HelpForm = () => {
       ></div>
       <div className="small-container">
         <div className="row">
-          <div className="col-xxl-4 col-xl-4 col-lg-4">
+          <div className="col-xxl-4 col-xl-4">
             <div className="image-area w-img">
               <img
                 src="/assets/imgs/resources/help-form.jpeg"
                 alt=""
-                width={1151}
+                width={822}
                 height={757}
               />
             </div>
           </div>
-          <div className="col-xxl-8 col-xl-8 col-lg-8">
+          <div className="col-xxl-8 col-xl-8">
             <div className="help-form-area">
               <h3 className="section-title mb-40 text-white">
                 Ready to start next project together? Let's get in touch!
