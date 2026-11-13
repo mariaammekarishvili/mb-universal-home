@@ -26,15 +26,12 @@ const HelpForm = () => {
       <div className="small-container">
         <div className="row">
           <div className="col-xxl-4 col-xl-4 col-lg-4">
-            <div
-              className="image-area w-img"
-              style={{ width: 735, height: 369 }}
-            >
+            <div className="image-area w-img">
               <img
                 src="/assets/imgs/resources/help-form.jpeg"
                 alt=""
-                width={735}
-                height={369}
+                width={1600}
+                height={900}
               />
             </div>
           </div>

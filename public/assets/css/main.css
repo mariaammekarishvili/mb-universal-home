@@ -5287,10 +5287,13 @@ width: 100%;
 /* HELP FORM CSS START
 /*----------------------------------------*/
 
+/* Fills the space left of the form: the form's text starts 187px left of the page's center. */
 .help-form-section .image-area {
   position: absolute;
+  top: 0;
   bottom: 0;
   left: 0;
+  width: calc(50% - 220px);
 }
 
 .help-form-section {
@@ -5325,30 +5328,24 @@ width: 100%;
   background-size: contain;
 }
 
-@media only screen and (max-width: 1830px){ 
-
-.help-form-section .image-area {
-  left: -270px;
-}
-              
-}
-
-@media only screen and (max-width: 1300px){ 
+@media only screen and (max-width: 1770px){
 
   .help-form-section .image-area {
-    left: -370px;
+    display: none;
   }
+
+}
+
+@media only screen and (max-width: 1300px){
+
   .help-form-area .primary-btn-1{
     padding: 22px;
   }
                 
 }
 
-@media only screen and (max-width: 991px){ 
+@media only screen and (max-width: 991px){
 
-  .help-form-section .image-area {
-    display: none;
-  }
   .help-form-area .primary-btn-1{
     width: 100%;
     justify-content: center;
